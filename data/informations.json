@@ -1,0 +1,58 @@
+{
+    "presentation": {
+        "titre": "Présentation du projet",
+        "icone": "fas fa-info-circle",
+        "contenu": "La Mallette est un projet créé par des étudiants en L2 MIASHS de l'Université Grenoble Alpes. Notre objectif est de fournir une plateforme pédagogique pour les tuteurs de la licence MIASHS."
+    },
+    "equipe": {
+        "titre": "Notre équipe",
+        "icone": "fas fa-users",
+        "introduction": "Ce projet a été réalisé dans le cadre du cours de gestion de projet par :",
+        "membres": [
+            {
+                "nom": "DAHOUATHI Ramez",
+                "icone": "fas fa-user-graduate"
+            },
+            {
+                "nom": "ELLEUCH Elias",
+                "icone": "fas fa-user-graduate"
+            },
+            {
+                "nom": "GAOUACHE Leane",
+                "icone": "fas fa-user-graduate"
+            },
+            {
+                "nom": "LESBROS Lucie",
+                "icone": "fas fa-user-graduate"
+            },
+            {
+                "nom": "TRIMAILLE Julia",
+                "icone": "fas fa-user-graduate"
+            }
+        ]
+    },
+    "contact": {
+        "titre": "Contact",
+        "icone": "fas fa-envelope",
+        "introduction": "Pour toute question ou suggestion, n'hésitez pas à nous contacter :",
+        "informations": [
+            {
+                "type": "email",
+                "valeur": "elias.elleuch@univ-grenoble-alpes.fr",
+                "icone": "fas fa-envelope"
+            },
+            {
+                "type": "adresse",
+                "valeur": "Bâtiment Michel Dubois, 1251 Rue des Universités, 38400 Saint-Martin-d'Hères",
+                "icone": "fas fa-map-marker-alt"
+            }
+        ],
+        "superviseur": {
+            "titre": "Superviseur du projet",
+            "nom": "LEMAIRE Benoit",
+            "email": "benoit.lemaire@univ-grenoble-alpes.fr",
+            "bureau": "Bureau je sais plus, Bâtiment Michel Dubois",
+            "icone": "fas fa-user-tie"
+        }
+    }
+} 

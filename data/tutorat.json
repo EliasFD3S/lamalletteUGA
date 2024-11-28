@@ -1,0 +1,216 @@
+{
+  "tutorat_l1": {
+    "titre": "Tutorat L1 MIASHS",
+    "matieres": {
+      "algebre": {
+        "titre": "Algèbre linéaire",
+        "icone": "fas fa-superscript",
+        "sections": [
+          {
+            "titre": "Matrices et systèmes linéaires",
+            "fichiers": [
+              {
+                "titre": "Cours - Matrices",
+                "chemin": "files/l1/algebre/cours_matrices.pdf"
+              },
+              {
+                "titre": "Sources du cours",
+                "chemin": "files/l1/algebre/matrices_source.tex"
+              },
+              {
+                "titre": "TD - Matrices",
+                "chemin": "files/l1/algebre/td_matrices.pdf"
+              },
+              {
+                "titre": "Programme de calcul matriciel",
+                "chemin": "files/l1/algebre/MatrixCalc.java"
+              }
+            ]
+          },
+          {
+            "titre": "Espaces vectoriels",
+            "fichiers": [
+              {
+                "titre": "Cours - Espaces vectoriels",
+                "chemin": "files/l1/algebre/cours_espaces.pdf"
+              },
+              {
+                "titre": "Sources et exercices",
+                "chemin": "files/l1/algebre/espaces_complet.zip"
+              }
+            ]
+          }
+        ]
+      },
+      "analyse": {
+        "titre": "Analyse réelle",
+        "icone": "fas fa-square-root-alt",
+        "sections": [
+          {
+            "titre": "Suites et séries",
+            "fichiers": [
+              {
+                "titre": "Cours complet",
+                "chemin": "files/l1/analyse/cours_suites.pdf"
+              },
+              {
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/analyse/suites_sources.tex"
+              },
+              {
+                "titre": "Programme de calcul de limites",
+                "chemin": "files/l1/analyse/LimitCalculator.java"
+              }
+            ]
+          },
+          {
+            "titre": "Fonctions continues",
+            "fichiers": [
+              {
+                "titre": "Cours et exercices",
+                "chemin": "files/l1/analyse/fonctions.pdf"
+              },
+              {
+                "titre": "Archive complète",
+                "chemin": "files/l1/analyse/fonctions_pack.zip"
+              }
+            ]
+          }
+        ]
+      },
+      "probabilites": {
+        "titre": "Probabilités",
+        "icone": "fas fa-dice",
+        "sections": [
+          {
+            "titre": "Probabilités discrètes",
+            "fichiers": [
+              {
+                "titre": "Cours - Probabilités discrètes",
+                "chemin": "files/l1/proba/cours_discret.pdf"
+              },
+              {
+                "titre": "Sources du cours",
+                "chemin": "files/l1/proba/proba_discret.tex"
+              },
+              {
+                "titre": "Simulateur de probabilités",
+                "chemin": "files/l1/proba/ProbSimulator.java"
+              }
+            ]
+          }
+        ]
+      },
+      "algo": {
+        "titre": "Algorithmique",
+        "icone": "fas fa-code",
+        "sections": [
+          {
+            "titre": "Introduction à l'algorithmique",
+            "fichiers": [
+              {
+                "titre": "Support de cours",
+                "chemin": "files/l1/algo/intro_algo.pdf"
+              },
+              {
+                "titre": "Exemples de code",
+                "chemin": "files/l1/algo/examples.java"
+              },
+              {
+                "titre": "TD et corrections",
+                "chemin": "files/l1/algo/td_pack.zip"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "tutorat_l2": {
+    "titre": "Tutorat L2 MIASHS",
+    "matieres": {
+      "algebre": {
+        "titre": "Algèbre linéaire",
+        "icone": "fas fa-superscript",
+        "sections": [
+          {
+            "titre": "Réduction des endomorphismes",
+            "fichiers": [
+              {
+                "titre": "Cours - Endomorphismes",
+                "chemin": "files/l2/algebre/cours_endo.pdf"
+              },
+              {
+                "titre": "Sources LaTeX",
+                "chemin": "files/l2/algebre/endo_sources.tex"
+              },
+              {
+                "titre": "Programme de diagonalisation",
+                "chemin": "files/l2/algebre/DiagonalizationTool.java"
+              }
+            ]
+          },
+          {
+            "titre": "Formes bilinéaires",
+            "fichiers": [
+              {
+                "titre": "Cours complet",
+                "chemin": "files/l2/algebre/formes_bilin.pdf"
+              },
+              {
+                "titre": "Archive des TD",
+                "chemin": "files/l2/algebre/td_bilin.zip"
+              }
+            ]
+          }
+        ]
+      },
+      "analyse": {
+        "titre": "Analyse réelle",
+        "icone": "fas fa-square-root-alt",
+        "sections": [
+          {
+            "titre": "Intégrales multiples",
+            "fichiers": [
+              {
+                "titre": "Cours et exercices",
+                "chemin": "files/l2/analyse/integrales.pdf"
+              },
+              {
+                "titre": "Sources du cours",
+                "chemin": "files/l2/analyse/integrales.tex"
+              },
+              {
+                "titre": "Calculateur d'intégrales",
+                "chemin": "files/l2/analyse/IntegralCalc.java"
+              }
+            ]
+          }
+        ]
+      },
+      "probabilites": {
+        "titre": "Probabilités",
+        "icone": "fas fa-dice",
+        "sections": [
+          {
+            "titre": "Vecteurs aléatoires",
+            "fichiers": [
+              {
+                "titre": "Cours complet",
+                "chemin": "files/l2/proba/vecteurs.pdf"
+              },
+              {
+                "titre": "Sources et exercices",
+                "chemin": "files/l2/proba/pack_complet.zip"
+              },
+              {
+                "titre": "Simulateur vectoriel",
+                "chemin": "files/l2/proba/VectorSimulator.java"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+} 

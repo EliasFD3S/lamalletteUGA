@@ -1,0 +1,651 @@
+/* Application de la police Montserrat */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Pour Montserrat Bold */
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajout pour le contenu principal */
+main, .container {
+    flex: 1 0 auto;
+}
+
+/* Modification pour le footer */
+footer {
+    flex-shrink: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+/* Personnalisation de la barre de navigation */
+.custom-navbar {
+    background-color: #00563F;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    padding: 1rem !important;
+}
+
+/* Gestion des dropdowns selon la taille d'écran */
+@media (min-width: 992px) {
+    /* Sur desktop */
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+    
+    .dropdown-menu {
+        display: none !important;
+    }
+    
+    .nav-item.dropdown:hover .nav-link,
+    .dropdown-toggle:hover,
+    .dropdown-toggle:focus {
+        cursor: default !important;
+    }
+}
+
+@media (max-width: 991.98px) {
+    /* Sur mobile */
+    .dropdown-toggle::after {
+        display: inline-block !important;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .dropdown.show .dropdown-menu {
+        display: block !important;
+    }
+
+    .dropdown-item {
+        color: white !important;
+    }
+
+    .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Style pour le bouton hamburger */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.carousel-caption-below {
+    text-align: left; /* Aligne le titre à gauche */
+    padding: 10px 0; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
+}
+
+.carousel-caption-below h5 {
+    font-size: 1.5rem; /* Taille du titre */
+    color: #333; /* Couleur du texte du titre */
+}
+
+/* Cache les boutons par défaut */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+/* Style pour le conteneur des boutons de navigation personnalisés */
+.custom-carousel-controls {
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+/* Style des boutons personnalisés */
+.carousel-control-prev,
+.carousel-control-next {
+    position: relative; /* Changer de absolute à relative */
+    width: 40px;
+    height: 40px;
+    background-color: #00693C;
+    border-radius: 0;
+    margin-left: 10px;
+    transform: none;
+    top: auto;
+    left: auto;
+    right: auto;
+    opacity: 1;
+}
+
+/* Ajuster la taille des icônes */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style pour l'indicateur de slide (ex: 1/6) */
+.carousel-index {
+    background-color: #00A89D;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Style pour les cartes de cours */
+.card-header {
+    background-color: #00693C !important;  /* Vert UGA */
+}
+
+.list-group-item-action:hover {
+    background-color: #f8f9fa;
+}
+
+.list-group-item-action:hover .fa-download {
+    color: #00693C;
+}
+
+/* Animation pour l'icône de téléchargement */
+.fa-download {
+    transition: color 0.3s ease;
+}
+
+/* Style des boutons de navigation du carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #00693C;
+    border-radius: 0;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+/* Conteneur des boutons */
+.custom-carousel-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Ajustements pour mobile */
+@media (max-width: 576px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 25px;  /* Encore plus petit sur mobile */
+        height: 25px;
+        margin: 0 2px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 12px;  /* Icônes plus petites */
+        height: 12px;
+    }
+
+    /* Ajuster aussi l'indicateur de slide si présent */
+    .carousel-index {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+/* Style des icônes dans les boutons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 25px;
+    height: 25px;
+    background-size: 100%;
+    display: inline-block;
+}
+
+/* Assurer que le carousel a une position relative */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style pour les boutons de navigation */
+.carousel-navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+}
+
+.nav-button {
+    background-color: #004638;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #003328;
+}
+
+.nav-button i {
+    font-size: 16px;
+}
+
+/* Supprimer les styles par défaut du carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    display: none;
+}
+
+/* Style pour la navigation fixe */
+.fixed-navigation {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Supprimer les boutons de navigation des items individuels */
+.carousel-item .carousel-navigation {
+    display: none;
+}
+
+/* Forcer l'uppercase sur tous les éléments de la navbar */
+.custom-navbar .nav-link,
+.custom-navbar .dropdown-item {
+    text-transform: uppercase;
+}
+
+/* Si vous voulez aussi affecter le texte dans le menu hamburger */
+.navbar-toggler {
+    text-transform: uppercase;
+}
+
+/* Style pour les accordéons */
+.accordion-button {
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #00693C;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(0, 105, 60, 0.25);
+}
+
+/* Style pour les icônes de fichiers */
+.list-group-item i.far {
+    font-size: 1.2rem;
+}
+
+/* Hover effect pour les fichiers */
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.list-group-item:hover .fa-download {
+    color: #00693C;
+}
+
+/* Désactiver le dropdown sur desktop */
+@media (min-width: 992px) { /* 992px est le breakpoint lg de Bootstrap */
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+    
+    .dropdown-menu {
+        display: none !important;
+    }
+    
+    .nav-item.dropdown:hover .nav-link,
+    .dropdown-toggle:hover,
+    .dropdown-toggle:focus {
+        cursor: default !important;
+    }
+}
+
+/* Réactiver le dropdown uniquement sur mobile */
+@media (max-width: 991.98px) {
+    .dropdown-toggle::after {
+        display: inline-block !important;
+    }
+    
+    .dropdown-menu {
+        display: none;
+    }
+    
+    .dropdown.show .dropdown-menu {
+        display: block !important;
+    }
+}
+
+/* Style pour le triangle en hover */
+.nav-link {
+    position: relative;
+    padding-bottom: 0 !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -8px; /* Colle le triangle au bas */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Afficher le triangle au hover et pour le lien actif */
+.nav-link:hover::after,
+.nav-link.active::after {
+    opacity: 1;
+}
+
+/* Sur mobile, masquer complètement le triangle et désactiver le hover */
+@media (max-width: 991.98px) {
+    .nav-link::after {
+        display: none !important;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        display: none !important;
+    }
+
+    /* Désactiver tous les effets de hover sur mobile */
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: transparent !important;
+    }
+}
+
+/* Ajustements pour le menu mobile */
+@media (max-width: 991.98px) {
+    /* Style du menu hamburger */
+    .navbar-toggler {
+        margin: 10px;
+    }
+
+    /* Style des liens dans le menu mobile */
+    .navbar-nav {
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        padding: 12px 20px !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Ajustement des sous-menus */
+    .dropdown-menu {
+        padding: 0;
+        margin: 0;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .dropdown-item {
+        padding: 12px 30px;
+        color: white !important;
+    }
+
+    /* Gestion du texte trop long */
+    .nav-link, .dropdown-item {
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    /* Ajustement de la largeur du menu */
+    .navbar-collapse {
+        max-width: 100%;
+    }
+
+    /* Assurer que le contenu ne déborde pas */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Réduction de la taille de la police */
+    .nav-link, .dropdown-item {
+        font-size: 14px !important; /* Taille réduite */
+        white-space: normal;
+        word-wrap: break-word;
+    }
+
+    /* Pour les très petits écrans */
+    @media (max-width: 576px) {
+        .nav-link, .dropdown-item {
+            font-size: 12px !important; /* Encore plus petit pour les très petits écrans */
+        }
+    }
+}
+
+/* Ajustement supplémentaire pour les très petits écrans */
+@media (max-width: 576px) {
+    .navbar-brand img {
+        max-width: 200px; /* Ajuster selon vos besoins */
+    }
+}
+
+/* Animation pour le dropdown menu */
+.navbar-collapse {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animation uniquement sur mobile */
+@media (max-width: 991.98px) {
+    /* Animation du menu hamburger */
+    .navbar-collapse {
+        transform: translateY(-10px);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.show {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Animation des sous-menus */
+    .dropdown-menu {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .dropdown.show .dropdown-menu {
+        display: block;
+        animation: slideDown 0.3s ease-in-out forwards;
+    }
+}
+
+/* Animation keyframes */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Désactiver l'animation sur desktop */
+@media (min-width: 992px) {
+    .dropdown-menu {
+        animation: none;
+    }
+}
+
+/* Style de base pour les boutons du carousel */
+.carousel-control-prev,
+.carousel-control-next {
+    position: relative !important;
+    width: 40px !important;
+    height: 40px !important;
+    background-color: #00693C !important;
+    border-radius: 0 !important;
+    margin: 0 5px !important;
+    opacity: 1 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Conteneur des boutons */
+.custom-carousel-controls {
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 10px !important;
+    margin-top: 15px !important;
+    width: auto !important;
+}
+
+/* Version mobile */
+@media (max-width: 576px) {
+    .custom-carousel-controls .carousel-control-prev,
+    .custom-carousel-controls .carousel-control-next {
+        width: 25px !important;
+        height: 25px !important;
+        margin: 0 2px !important;
+    }
+
+    .custom-carousel-controls .carousel-control-prev-icon,
+    .custom-carousel-controls .carousel-control-next-icon {
+        width: 12px !important;
+        height: 12px !important;
+    }
+}
+
+/* Nouveau style pour les boutons sur mobile */
+@media (max-width: 768px) {
+    .carousel-navigation {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+    }
+
+    .nav-button {
+        width: 35px;
+        height: 35px;
+        background-color: rgba(0, 70, 56, 0.8); /* Vert UGA semi-transparent */
+        border: none;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .nav-button:hover {
+        background-color: rgba(0, 70, 56, 1); /* Vert UGA plein au hover */
+    }
+
+    /* Masquer les boutons fixes sur mobile */
+    .fixed-navigation {
+        display: none;
+    }
+}
+
+/* Style pour desktop */
+@media (min-width: 769px) {
+    .carousel-navigation {
+        display: none; /* Cacher les boutons intégrés sur desktop */
+    }
+
+    .fixed-navigation {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        pointer-events: none;
+    }
+
+    .fixed-navigation .nav-button {
+        pointer-events: auto;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(0, 70, 56, 0.8);
+        border: none;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+.hero-title {
+    font-size: 3rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+}

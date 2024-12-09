@@ -84,64 +84,6 @@ footer {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.carousel-caption-below {
-    text-align: left; /* Aligne le titre à gauche */
-    padding: 10px 0; /* Ajoute un peu d'espace au-dessus et en dessous du titre */
-}
-
-.carousel-caption-below h5 {
-    font-size: 1.5rem; /* Taille du titre */
-    color: #333; /* Couleur du texte du titre */
-}
-
-/* Cache les boutons par défaut */
-.carousel-control-prev,
-.carousel-control-next {
-    display: none;
-}
-
-/* Style pour le conteneur des boutons de navigation personnalisés */
-.custom-carousel-controls {
-    position: absolute;
-    bottom: 10px;
-    right: 15px;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-}
-
-/* Style des boutons personnalisés */
-.carousel-control-prev,
-.carousel-control-next {
-    position: relative; /* Changer de absolute à relative */
-    width: 40px;
-    height: 40px;
-    background-color: #00693C;
-    border-radius: 0;
-    margin-left: 10px;
-    transform: none;
-    top: auto;
-    left: auto;
-    right: auto;
-    opacity: 1;
-}
-
-/* Ajuster la taille des icônes */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 20px;
-    height: 20px;
-}
-
-/* Style pour l'indicateur de slide (ex: 1/6) */
-.carousel-index {
-    background-color: #00A89D;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
 /* Style pour les cartes de cours */
 .card-header {
     background-color: #00693C !important;  /* Vert UGA */
@@ -158,77 +100,6 @@ footer {
 /* Animation pour l'icône de téléchargement */
 .fa-download {
     transition: color 0.3s ease;
-}
-
-/* Style des boutons de navigation du carousel */
-.carousel-control-prev,
-.carousel-control-next {
-    width: 40px;
-    height: 40px;
-    background-color: #00693C;
-    border-radius: 0;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 5px;
-}
-
-/* Conteneur des boutons */
-.custom-carousel-controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
-    width: 100%;
-}
-
-/* Ajustements pour mobile */
-@media (max-width: 576px) {
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 25px;  /* Encore plus petit sur mobile */
-        height: 25px;
-        margin: 0 2px;
-    }
-
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 12px;  /* Icônes plus petites */
-        height: 12px;
-    }
-
-    /* Ajuster aussi l'indicateur de slide si présent */
-    .carousel-index {
-        font-size: 12px;
-        padding: 4px 8px;
-    }
-}
-
-/* Style des icônes dans les boutons */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    width: 25px;
-    height: 25px;
-    background-size: 100%;
-    display: inline-block;
-}
-
-/* Assurer que le carousel a une position relative */
-.carousel {
-    position: relative;
-    overflow: hidden;
-}
-
-/* Style pour les boutons de navigation */
-.carousel-navigation {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
 }
 
 .nav-button {
@@ -251,6 +122,7 @@ footer {
 
 .nav-button i {
     font-size: 16px;
+    text-transform: uppercase;
 }
 
 /* Supprimer les styles par défaut du carousel */
@@ -268,18 +140,6 @@ footer {
     gap: 10px;
     z-index: 1000;
 }
-
-/* Supprimer les boutons de navigation des items individuels */
-.carousel-item .carousel-navigation {
-    display: none;
-}
-
-/* Forcer l'uppercase sur tous les éléments de la navbar */
-.custom-navbar .nav-link,
-.custom-navbar .dropdown-item {
-    text-transform: uppercase;
-}
-
 /* Si vous voulez aussi affecter le texte dans le menu hamburger */
 .navbar-toggler {
     text-transform: uppercase;

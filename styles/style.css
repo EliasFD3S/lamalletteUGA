@@ -375,59 +375,9 @@ footer {
     }
 }
 
-/* Style de base pour les boutons du carousel */
-.carousel-control-prev,
-.carousel-control-next {
-    position: relative !important;
-    width: 40px !important;
-    height: 40px !important;
-    background-color: #00693C !important;
-    border-radius: 0 !important;
-    margin: 0 5px !important;
-    opacity: 1 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-}
-
-/* Conteneur des boutons */
-.custom-carousel-controls {
-    position: relative !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    gap: 10px !important;
-    margin-top: 15px !important;
-    width: auto !important;
-}
-
-/* Version mobile */
-@media (max-width: 576px) {
-    .custom-carousel-controls .carousel-control-prev,
-    .custom-carousel-controls .carousel-control-next {
-        width: 25px !important;
-        height: 25px !important;
-        margin: 0 2px !important;
-    }
-
-    .custom-carousel-controls .carousel-control-prev-icon,
-    .custom-carousel-controls .carousel-control-next-icon {
-        width: 12px !important;
-        height: 12px !important;
-    }
-}
 
 /* Nouveau style pour les boutons sur mobile */
 @media (max-width: 768px) {
-    .carousel-navigation {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        display: flex;
-        gap: 8px;
-        z-index: 10;
-    }
-
     .nav-button {
         width: 35px;
         height: 35px;
@@ -453,9 +403,6 @@ footer {
 
 /* Style pour desktop */
 @media (min-width: 769px) {
-    .carousel-navigation {
-        display: none; /* Cacher les boutons intégrés sur desktop */
-    }
 
     .fixed-navigation {
         position: absolute;

@@ -122,7 +122,6 @@ footer {
 
 .nav-button i {
     font-size: 16px;
-    text-transform: uppercase;
 }
 
 /* Supprimer les styles par défaut du carousel */
@@ -211,6 +210,7 @@ footer {
 .nav-link {
     position: relative;
     padding-bottom: 0 !important;
+    text-transform: uppercase;
 }
 
 .nav-link::after {

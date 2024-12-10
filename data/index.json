@@ -33,40 +33,10 @@
         "room": "B102"
       },
       {
-        "date": "2024-04-15",
-        "level": "L1",
-        "subject": "Algèbre linéaire",
-        "room": "B102"
-      },
-      {
-        "date": "2024-04-15",
-        "level": "L1",
-        "subject": "Algèbre linéaire",
-        "room": "B102"
-      },
-      {
-        "date": "2024-04-15",
-        "level": "L1",
-        "subject": "Algèbre linéaire",
-        "room": "B102"
-      },
-      {
-        "date": "2025-01-02",
+        "date": "2025-01-13",
         "level": "L2",
-        "subject": "Analyse Réelle",
-        "room": "Amphi PMF 4"
-      },
-      {
-        "date": "2025-02-10",
-        "level": "L2",
-        "subject": "Microéconomie",
-        "room": "B6"
-      },
-      {
-        "date": "2025-03-12",
-        "level": "L2",
-        "subject": "Base de données",
-        "room": "Amphi PMF 7"
+        "subject": "Analyse réelle",
+        "room": "B101"
       }
     ]
   },

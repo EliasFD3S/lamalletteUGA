@@ -4,7 +4,7 @@ Icones pour les fichiers json  :  https://fontawesome.com/icons
 
 Exemple : 
 
-//<i class="fa-solid fa-file"></i>
+[comment]: <> (<i class="fa-solid fa-file"></i>)
 
 dans le JSON : 
           "icon": "fas fa-book",

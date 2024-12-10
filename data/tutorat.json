@@ -42,25 +42,6 @@
           }
         ]
       },
-      "microeconomie": {
-        "titre": "Microéconomie",
-        "icone": "fas fa-money-bill-trend-up",
-        "sections": [
-          {
-            "titre": "Taux marginal de substition",
-            "fichiers": [
-              {
-                "titre": "Cours - Microéconomie",
-                "chemin": "files/l1/algebre/cours_economie.pdf"
-              },
-              {
-                "titre": "Cours - Microéconomie",
-                "chemin": "files/l1/algebre/cours_economie.pdf"
-              }
-            ]
-          }
-        ]
-      },
       "analyse": {
         "titre": "Analyse réelle",
         "icone": "fas fa-square-root-alt",
@@ -138,6 +119,50 @@
               {
                 "titre": "TD et corrections",
                 "chemin": "files/l1/algo/td_pack.zip"
+              }
+            ]
+          }
+        ]
+      },
+      "microeconomie": {
+        "titre": "Algorithmique",
+        "icone": "fas fa-code",
+        "sections": [
+          {
+            "titre": "Taux marginal de substituion",
+            "fichiers": [
+              {
+                "titre": "Synthèse cours",
+                "chemin": "files/l1/algo/intro_algo.pdf"
+              },
+              {
+                "titre": "Code calcul",
+                "chemin": "files/l1/algo/examples.java"
+              },
+              {
+                "titre": "Exercices",
+                "chemin": "files/l1/algo/td_pack.zip"
+              }
+            ]
+          },
+          {
+            "titre": "Effet de revenu",
+            "fichiers": [
+              {
+                "titre": "Synthèse cours",
+                "chemin": "files/l1/algo/intro_algo.pdf"
+              },
+              {
+                "titre": "Code calcul",
+                "chemin": "files/l1/algo/examples.java"
+              },
+              {
+                "titre": "Exercices",
+                "chemin": "files/l1/algo/td_pack.zip"
+              },
+              {
+                "titre": "Photo de vacances",
+                "chemin": "files/l1/"
               }
             ]
           }

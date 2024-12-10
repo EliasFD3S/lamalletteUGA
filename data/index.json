@@ -49,6 +49,12 @@
             "level": "L1",
             "subject": "Algèbre linéaire",
             "room": "B102"
+        },
+        {
+            "date": "2025-01-02",
+            "level": "L2",
+            "subject": "Analyse Réelle",
+            "room": "Amphi PMF 4"
         }
       ]
     },

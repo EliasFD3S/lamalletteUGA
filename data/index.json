@@ -1,75 +1,81 @@
 {
-    "hero": {
-      "title": "La Mallette",
-      "subtitle": "Ressources pour les tuteurs MIASHS de l'UGA",
-      "description": "Accédez à différentes ressources utiles aux sessions de tutorats. La Mallette couvre la L1 et la L2 MIASHS."
-    },
-    "tutorTools": {
-      "title": "Outils du tuteur",
-      "tools": [
-        {
-          "icon": "fas fa-book",
-          "title": "Synthèses de cours",
-          "description": "Accédez aux documents résumant les concepts clés."
-        },
-        {
-          "icon": "fas fa-pencil-alt",
-          "title": "Exercices",
-          "description": "Exercices pratiques avec solutions."
-        },
-        {
-          "icon": "fas fa-file-code",
-          "title": "Fichiers TP",
-          "description": "Téléchargez les fichiers nécessaires pour les TP."
-        }
-      ]
-    },
-    "schedule": {
-      "sessions": [
-        {
-          "date": "2024-04-15",
-          "level": "L1",
-          "subject": "Algèbre linéaire",
-          "room": "B102"
-        },
-        {
-            "date": "2024-04-15",
-            "level": "L1",
-            "subject": "Algèbre linéaire",
-            "room": "B102"
-        },
-        {
-            "date": "2024-04-15",
-            "level": "L1",
-            "subject": "Algèbre linéaire",
-            "room": "B102"
-        },
-        {
-            "date": "2024-04-15",
-            "level": "L1",
-            "subject": "Algèbre linéaire",
-            "room": "B102"
-        },
-        {
-            "date": "2025-01-02",
-            "level": "L2",
-            "subject": "Analyse Réelle",
-            "room": "Amphi PMF 4"
-        }
-      ]
-    },
-    "importantInfo": {
-      "items": [
-        {
-          "icon": "fas fa-info-circle",
-          "title": "Exemple réunion",
-          "content": "Prochaine réunion le 20 avril"
-        },
-        {
-          "icon": "fas fa-file-alt",
-          "title": "Exemple rapport mensuel",
-          "content": "À rendre avant le 30 avril"
-        }
-      ]
-    }
+  "hero": {
+    "title": "La Mallette",
+    "subtitle": "Ressources pour les tuteurs MIASHS de l'UGA",
+    "description": "Accédez à différentes ressources utiles aux sessions de tutorats. La Mallette couvre la L1 et la L2 MIASHS."
+  },
+  "tutorTools": {
+    "title": "Outils du tuteur",
+    "tools": [
+      {
+        "icon": "fas fa-book",
+        "title": "Synthèses de cours",
+        "description": "Accédez aux documents résumant les concepts clés."
+      },
+      {
+        "icon": "fas fa-pencil-alt",
+        "title": "Exercices",
+        "description": "Exercices pratiques avec solutions."
+      },
+      {
+        "icon": "fas fa-file-code",
+        "title": "Fichiers TP",
+        "description": "Téléchargez les fichiers nécessaires pour les TP."
+      }
+    ]
+  },
+  "schedule": {
+    "sessions": [
+      {
+        "date": "2024-04-15",
+        "level": "L1",
+        "subject": "Algèbre linéaire",
+        "room": "B102"
+      },
+      {
+        "date": "2024-04-15",
+        "level": "L1",
+        "subject": "Algèbre linéaire",
+        "room": "B102"
+      },
+      {
+        "date": "2024-04-15",
+        "level": "L1",
+        "subject": "Algèbre linéaire",
+        "room": "B102"
+      },
+      {
+        "date": "2024-04-15",
+        "level": "L1",
+        "subject": "Algèbre linéaire",
+        "room": "B102"
+      },
+      {
+        "date": "2025-01-02",
+        "level": "L2",
+        "subject": "Analyse Réelle",
+        "room": "Amphi PMF 4"
+      },
+      {
+        "date": "2025-02-10",
+        "level": "L2",
+        "subject": "Microéconomie",
+        "room": "B6"
+      }
+    ]
+  },
+  "importantInfo": {
+    "items": [
+      {
+        "icon": "fas fa-info-circle",
+        "title": "Exemple réunion",
+        "content": "Prochaine réunion le 20 avril"
+      },
+      {
+        "icon": "fas fa-file-alt",
+        "title": "Exemple rapport mensuel",
+        "content": "À rendre avant le 30 avril"
+      }
+    ]
   }
+}

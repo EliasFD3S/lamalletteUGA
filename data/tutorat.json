@@ -42,6 +42,21 @@
           }
         ]
       },
+        "microeconomie": {
+        "titre": "Microéconomie",
+        "icone": "fas fa-money-bill-trend-up",
+        "sections": [
+          {
+            "titre": "Taux marginal de substition",
+            "fichiers": [
+              {
+                "titre": "Cours - Microéconomie",
+                "chemin": "files/l1/algebre/cours_economie.pdf"
+              }
+            ]
+          }
+        ]
+      },
       "analyse": {
         "titre": "Analyse réelle",
         "icone": "fas fa-square-root-alt",

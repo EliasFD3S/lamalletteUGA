@@ -11,3 +11,7 @@ dans le JSON :
           "icon": "fas fa-book",
           remplacer par : 
           "icon": "fas fa-file",
+
+JSON editor : 
+
+https://jsoneditoronline.org/

@@ -433,6 +433,7 @@ footer {
 
 .hero-title {
     font-size: 3rem;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {

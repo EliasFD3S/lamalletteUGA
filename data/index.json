@@ -61,6 +61,12 @@
         "level": "L2",
         "subject": "Microéconomie",
         "room": "B6"
+      },
+      {
+        "date": "2025-03-12",
+        "level": "L2",
+        "subject": "Base de données",
+        "room": "Amphi PMF 7"
       }
     ]
   },

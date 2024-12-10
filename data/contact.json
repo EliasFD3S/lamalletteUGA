@@ -19,6 +19,11 @@
             "matiere": "Algorithmique",
             "nom": "Professeur D",
             "email": "prof.d@univ-grenoble-alpes.fr"
+        },
+        {
+            "matiere": "Economie",
+            "nom": "Professeur E",
+            "email": "prof.e@univ-grenoble-alpes.fr"
         }
     ]
 } 

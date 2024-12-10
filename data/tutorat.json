@@ -42,7 +42,7 @@
           }
         ]
       },
-        "microeconomie": {
+      "microeconomie": {
         "titre": "Microéconomie",
         "icone": "fas fa-money-bill-trend-up",
         "sections": [
@@ -229,7 +229,39 @@
             ]
           }
         ]
+      },
+      "programmation": {
+        "titre": "Programmation",
+        "icone": "fas fa-code",
+        "sections": [
+          {
+            "titre": "Cours progra",
+            "fichiers": [
+              {
+                "titre": "Cours complet",
+                "chemin": "files/l2/progra/coursprogra.pdf"
+              }
+            ]
+          },
+          {
+            "titre": "Fichiers TP",
+            "fichiers": [
+              {
+                "titre": "TP 1",
+                "chemin": "files/l2/progra/TP1.java"
+              },
+              {
+                "titre": "TP 2",
+                "chemin": "files/l2/progra/TP2.java"
+              },
+              {
+                "titre": "TP 3",
+                "chemin": "files/l2/progra/TP3.java"
+              }
+            ]
+          }
+        ]
       }
     }
   }
-} 
+}

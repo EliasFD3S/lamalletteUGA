@@ -24,6 +24,11 @@
             "matiere": "Sciences cognitives",
             "nom": "Professeur E",
             "email": "prof.e@univ-grenoble-alpes.fr"
+        },
+        {
+            "matiere": "Microéconomie",
+            "nom": "Professeur F",
+            "email": "prof.f@univ-grenoble-alpes.fr"
         }
     ]
 } 

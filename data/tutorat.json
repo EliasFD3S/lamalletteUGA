@@ -126,7 +126,7 @@
       },
       "microeconomie": {
         "titre": "Microéconomie",
-        "icone": "fas fa-money-bill-trend-up",
+        "icone": "fas fa-arrow-trend-up",
         "sections": [
           {
             "titre": "Taux marginal de substituion",

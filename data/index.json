@@ -37,6 +37,12 @@
         "level": "L2",
         "subject": "Analyse réelle",
         "room": "B101"
+      },
+      {
+        "date": "2025-01-13",
+        "level": "L1",
+        "subject": "Probabilités",
+        "room": "Amphi PMF 04"
       }
     ]
   },

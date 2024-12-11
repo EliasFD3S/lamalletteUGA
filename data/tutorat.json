@@ -167,6 +167,50 @@
             ]
           }
         ]
+      },
+      "cognition": {
+        "titre": "Sciences cognitives",
+        "icone": "fas fa-brain",
+        "sections": [
+          {
+            "titre": "Taux marginal de substituion",
+            "fichiers": [
+              {
+                "titre": "Synthèse cours",
+                "chemin": "files/l1/algo/intro_algo.pdf"
+              },
+              {
+                "titre": "Code calcul",
+                "chemin": "files/l1/algo/examples.java"
+              },
+              {
+                "titre": "Exercices",
+                "chemin": "files/l1/algo/td_pack.zip"
+              }
+            ]
+          },
+          {
+            "titre": "Effet de revenu",
+            "fichiers": [
+              {
+                "titre": "Synthèse cours",
+                "chemin": "files/l1/algo/intro_algo.pdf"
+              },
+              {
+                "titre": "Code calcul",
+                "chemin": "files/l1/algo/examples.java"
+              },
+              {
+                "titre": "Exercices",
+                "chemin": "files/l1/algo/td_pack.zip"
+              },
+              {
+                "titre": "Photo de vacances",
+                "chemin": "files/l1/"
+              }
+            ]
+          }
+        ]
       }
     }
   },

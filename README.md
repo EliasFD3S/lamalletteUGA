@@ -17,3 +17,24 @@ dans le JSON :
 JSON editor : 
 
 https://jsoneditoronline.org/
+
+
+Roots : 
+
+'files/l1/algebre/Cours_Algebre1.pdf',
+ 'files/l1/algebre/Cours_Algebre1.tex',
+ 'files/l1/algebre/Exos_Algebre1.pdf',
+ 'files/l1/algebre/Exos_Algebre1.tex',
+ 'files/l1/analyse/Analyse1_SynthèseCours.pdf',
+ 'files/l1/analyse/Analyse1_SynthèseCours.tex',
+ 'files/l1/analyse/Exos_Analyse1.pdf',
+ 'files/l1/analyse/Exos_Analyse1.tex',
+ 'files/l1/analyse/Analyse1_SynthèseCours.pdf',
+ 'files/l1/analyse/Analyse1_SynthèseCours.tex',
+ 'files/l1/analyse/Exos_Analyse1.pdf',
+ 'files/l1/analyse/Exos_Analyse1.tex',
+ 'files/l1/algo/intro_algo.pdf',
+ 'files/l1/algo/intro_algo.tex',
+ 'files/l1/algo/exos_algo.pdf',
+ 'files/l1/algo/exos_algo.tex',
+ 'files/l1/algo/exos_algo.java',

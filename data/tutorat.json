@@ -3,7 +3,7 @@
     "titre": "Tutorat L1 MIASHS",
     "matieres": {
       "algebre": {
-        "titre": "Algèbre linéaire",
+        "titre": "Algèbre linéaire 1",
         "icone": "fas fa-superscript",
         "sections": [
           {
@@ -43,43 +43,39 @@
         ]
       },
       "analyse": {
-        "titre": "Analyse réelle",
+        "titre": "Analyse réelle 1",
         "icone": "fas fa-square-root-alt",
         "sections": [
           {
-            "titre": "Suites et séries",
+            "titre": "Cours",
             "fichiers": [
               {
-                "titre": "Cours complet",
-                "chemin": "files/l1/analyse/cours_suites.pdf"
+                "titre": "Synthèse du cours",
+                "chemin": "files/l1/analyse/Analyse1_SynthèseCours.pdf"
               },
               {
                 "titre": "Sources LaTeX",
-                "chemin": "files/l1/analyse/suites_sources.tex"
-              },
-              {
-                "titre": "Programme de calcul de limites",
-                "chemin": "files/l1/analyse/LimitCalculator.java"
+                "chemin": "files/l1/analyse/Analyse1_SynthèseCours.tex"
               }
             ]
           },
           {
-            "titre": "Fonctions continues",
+            "titre": "Exercices",
             "fichiers": [
               {
-                "titre": "Cours et exercices",
-                "chemin": "files/l1/analyse/fonctions.pdf"
+                "titre": "Exercices AR1",
+                "chemin": "files/l1/analyse/Exos_Analyse1.pdf"
               },
               {
-                "titre": "Archive complète",
-                "chemin": "files/l1/analyse/fonctions_pack.zip"
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/analyse/Exos_Analyse1.tex"
               }
             ]
           }
         ]
       },
       "probabilites": {
-        "titre": "Probabilités",
+        "titre": "Probabilités 1",
         "icone": "fas fa-dice",
         "sections": [
           {
@@ -119,94 +115,6 @@
               {
                 "titre": "TD et corrections",
                 "chemin": "files/l1/algo/td_pack.zip"
-              }
-            ]
-          }
-        ]
-      },
-      "microeconomie": {
-        "titre": "Microéconomie",
-        "icone": "fas fa-arrow-trend-up",
-        "sections": [
-          {
-            "titre": "Taux marginal de substituion",
-            "fichiers": [
-              {
-                "titre": "Synthèse cours",
-                "chemin": "files/l1/algo/intro_algo.pdf"
-              },
-              {
-                "titre": "Code calcul",
-                "chemin": "files/l1/algo/examples.java"
-              },
-              {
-                "titre": "Exercices",
-                "chemin": "files/l1/algo/td_pack.zip"
-              }
-            ]
-          },
-          {
-            "titre": "Effet de revenu",
-            "fichiers": [
-              {
-                "titre": "Synthèse cours",
-                "chemin": "files/l1/algo/intro_algo.pdf"
-              },
-              {
-                "titre": "Code calcul",
-                "chemin": "files/l1/algo/examples.java"
-              },
-              {
-                "titre": "Exercices",
-                "chemin": "files/l1/algo/td_pack.zip"
-              },
-              {
-                "titre": "Photo de vacances",
-                "chemin": "files/l1/"
-              }
-            ]
-          }
-        ]
-      },
-      "cognition": {
-        "titre": "Sciences cognitives",
-        "icone": "fas fa-brain",
-        "sections": [
-          {
-            "titre": "Taux marginal de substituion",
-            "fichiers": [
-              {
-                "titre": "Synthèse cours",
-                "chemin": "files/l1/algo/intro_algo.pdf"
-              },
-              {
-                "titre": "Code calcul",
-                "chemin": "files/l1/algo/examples.java"
-              },
-              {
-                "titre": "Exercices",
-                "chemin": "files/l1/algo/td_pack.zip"
-              }
-            ]
-          },
-          {
-            "titre": "Effet de revenu",
-            "fichiers": [
-              {
-                "titre": "Synthèse cours",
-                "chemin": "files/l1/algo/intro_algo.pdf"
-              },
-              {
-                "titre": "Code calcul",
-                "chemin": "files/l1/algo/examples.java"
-              },
-              {
-                "titre": "Exercices",
-                "chemin": "files/l1/algo/td_pack.zip"
-              },
-              {
-                "titre": "Photo de vacances",
-                "chemin": "files/l1/"
               }
             ]
           }

@@ -7,36 +7,28 @@
         "icone": "fas fa-superscript",
         "sections": [
           {
-            "titre": "Matrices et systèmes linéaires",
+            "titre": "Cours",
             "fichiers": [
               {
-                "titre": "Cours - Matrices",
-                "chemin": "files/l1/algebre/cours_matrices.pdf"
+                "titre": "Synthèse cours",
+                "chemin": "files/l1/algebre/Cours_Algebre1.pdf"
               },
               {
-                "titre": "Sources du cours",
-                "chemin": "files/l1/algebre/matrices_source.tex"
-              },
-              {
-                "titre": "TD - Matrices",
-                "chemin": "files/l1/algebre/td_matrices.pdf"
-              },
-              {
-                "titre": "Programme de calcul matriciel",
-                "chemin": "files/l1/algebre/MatrixCalc.java"
+                "titre": "Source LaTeX",
+                "chemin": "files/l1/algebre/Cours_Algebre1.tex"
               }
             ]
           },
           {
-            "titre": "Espaces vectoriels",
+            "titre": "Exercices",
             "fichiers": [
               {
-                "titre": "Cours - Espaces vectoriels",
-                "chemin": "files/l1/algebre/cours_espaces.pdf"
+                "titre": "Exercices AL1",
+                "chemin": "files/l1/algebre/Exos_Algebre1.pdf"
               },
               {
-                "titre": "Sources et exercices",
-                "chemin": "files/l1/algebre/espaces_complet.zip"
+                "titre": "Source LaTeX",
+                "chemin": "files/l1/algebre/Exos_Algebre1.tex"
               }
             ]
           }
@@ -102,7 +94,24 @@
         "icone": "fas fa-code",
         "sections": [
           {
-            "titre": "Introduction à l'algorithmique",
+            "titre": "Synthèse cours",
+            "fichiers": [
+              {
+                "titre": "Support de cours",
+                "chemin": "files/l1/algo/intro_algo.pdf"
+              },
+              {
+                "titre": "Exemples de code",
+                "chemin": "files/l1/algo/examples.java"
+              },
+              {
+                "titre": "TD et corrections",
+                "chemin": "files/l1/algo/td_pack.zip"
+              }
+            ]
+          },
+          {
+            "titre": "Exercices",
             "fichiers": [
               {
                 "titre": "Support de cours",

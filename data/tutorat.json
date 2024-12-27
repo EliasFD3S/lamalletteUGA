@@ -70,7 +70,7 @@
         "titre": "Probabilités 1",
         "icone": "fas fa-dice",
         "sections": [
-                   {
+          {
             "titre": "Cours",
             "fichiers": [
               {
@@ -99,23 +99,19 @@
         ]
       },
       "algo": {
-        "titre": "Algorithmique",
+        "titre": "Programmation",
         "icone": "fas fa-code",
         "sections": [
           {
-            "titre": "Synthèse cours",
+            "titre": "Cours",
             "fichiers": [
               {
-                "titre": "Support de cours",
+                "titre": "Synthèse cours",
                 "chemin": "files/l1/algo/intro_algo.pdf"
               },
               {
-                "titre": "Exemples de code",
-                "chemin": "files/l1/algo/examples.java"
-              },
-              {
-                "titre": "TD et corrections",
-                "chemin": "files/l1/algo/td_pack.zip"
+                "titre": "Source LaTeX",
+                "chemin": "files/l1/algo/intro_algo.tex"
               }
             ]
           },
@@ -123,16 +119,16 @@
             "titre": "Exercices",
             "fichiers": [
               {
-                "titre": "Support de cours",
-                "chemin": "files/l1/algo/intro_algo.pdf"
+                "titre": "Exercices",
+                "chemin": "files/l1/algo/exos_algo.pdf"
               },
               {
-                "titre": "Exemples de code",
-                "chemin": "files/l1/algo/examples.java"
+                "titre": "Source LaTeX",
+                "chemin": "files/l1/algo/exos_algo.tex"
               },
               {
-                "titre": "TD et corrections",
-                "chemin": "files/l1/algo/td_pack.zip"
+                "titre": "Source Java",
+                "chemin": "files/l1/algo/exos_algo.java"
               }
             ]
           }

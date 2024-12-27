@@ -70,20 +70,29 @@
         "titre": "Probabilités 1",
         "icone": "fas fa-dice",
         "sections": [
-          {
-            "titre": "Probabilités discrètes",
+                   {
+            "titre": "Cours",
             "fichiers": [
               {
-                "titre": "Cours - Probabilités discrètes",
-                "chemin": "files/l1/proba/cours_discret.pdf"
+                "titre": "Synthèse du cours",
+                "chemin": "files/l1/analyse/Analyse1_SynthèseCours.pdf"
               },
               {
-                "titre": "Sources du cours",
-                "chemin": "files/l1/proba/proba_discret.tex"
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/analyse/Analyse1_SynthèseCours.tex"
+              }
+            ]
+          },
+          {
+            "titre": "Exercices",
+            "fichiers": [
+              {
+                "titre": "Exercices AR1",
+                "chemin": "files/l1/analyse/Exos_Analyse1.pdf"
               },
               {
-                "titre": "Simulateur de probabilités",
-                "chemin": "files/l1/proba/ProbSimulator.java"
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/analyse/Exos_Analyse1.tex"
               }
             ]
           }

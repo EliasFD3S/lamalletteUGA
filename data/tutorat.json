@@ -143,115 +143,29 @@
   "tutorat_l2": {
     "titre": "Tutorat L2 MIASHS",
     "matieres": {
-      "algebre": {
-        "titre": "Algèbre linéaire",
-        "icone": "fas fa-superscript",
-        "sections": [
-          {
-            "titre": "Réduction des endomorphismes",
-            "fichiers": [
-              {
-                "titre": "Cours - Endomorphismes",
-                "chemin": "files/l2/algebre/cours_endo.pdf"
-              },
-              {
-                "titre": "Sourcess LaTeX",
-                "chemin": "files/l2/algebre/endo_Sourcess.tex"
-              },
-              {
-                "titre": "Programme de diagonalisation",
-                "chemin": "files/l2/algebre/DiagonalizationTool.java"
-              }
-            ]
-          },
-          {
-            "titre": "Formes bilinéaires",
-            "fichiers": [
-              {
-                "titre": "Cours complet",
-                "chemin": "files/l2/algebre/formes_bilin.pdf"
-              },
-              {
-                "titre": "Archive des TD",
-                "chemin": "files/l2/algebre/td_bilin.zip"
-              }
-            ]
-          }
-        ]
-      },
-      "analyse": {
-        "titre": "Analyse réelle",
-        "icone": "fas fa-square-root-alt",
-        "sections": [
-          {
-            "titre": "Intégrales multiples",
-            "fichiers": [
-              {
-                "titre": "Cours et exercices",
-                "chemin": "files/l2/analyse/integrales.pdf"
-              },
-              {
-                "titre": "Sourcess du cours",
-                "chemin": "files/l2/analyse/integrales.tex"
-              },
-              {
-                "titre": "Calculateur d'intégrales",
-                "chemin": "files/l2/analyse/IntegralCalc.java"
-              }
-            ]
-          }
-        ]
-      },
-      "probabilites": {
-        "titre": "Probabilités",
-        "icone": "fas fa-dice",
-        "sections": [
-          {
-            "titre": "Vecteurs aléatoires",
-            "fichiers": [
-              {
-                "titre": "Cours complet",
-                "chemin": "files/l2/proba/vecteurs.pdf"
-              },
-              {
-                "titre": "Sourcess et exercices",
-                "chemin": "files/l2/proba/pack_complet.zip"
-              },
-              {
-                "titre": "Simulateur vectoriel",
-                "chemin": "files/l2/proba/VectorSimulator.java"
-              }
-            ]
-          }
-        ]
-      },
-      "programmation": {
-        "titre": "Programmation",
+      "algo": {
+        "titre": "Programmation par objets",
         "icone": "fas fa-code",
         "sections": [
           {
-            "titre": "Cours progra",
+            "titre": "Cours",
             "fichiers": [
               {
-                "titre": "Cours complet",
-                "chemin": "files/l2/progra/coursprogra.pdf"
+                "titre": "Cours",
+                "chemin": "files/l2/algebre/cours_endo.pdf"
               }
             ]
           },
           {
-            "titre": "Fichiers TP",
+            "titre": "Exercices",
             "fichiers": [
               {
-                "titre": "TP 1",
-                "chemin": "files/l2/progra/TP1.java"
+                "titre": "TD",
+                "chemin": "files/l2/algebre/formes_bilin.pdf"
               },
               {
-                "titre": "TP 2",
-                "chemin": "files/l2/progra/TP2.java"
-              },
-              {
-                "titre": "TP 3",
-                "chemin": "files/l2/progra/TP3.java"
+                "titre": "Correction",
+                "chemin": "files/l2/algebre/td_bilin.zip"
               }
             ]
           }

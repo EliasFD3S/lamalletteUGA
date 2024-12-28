@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{Synthèse du Cours de Statistiques}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Statistiques univariées}
+
+\subsection*{Vocabulaire et classification des variables}
+\begin{itemize}
+    \item \textbf{Variable discrète} : prend un nombre dénombrable de valeurs (exemple : nombre d’élèves ayant une note donnée).
+    \item \textbf{Variable continue} : peut prendre toutes les valeurs dans un intervalle (exemple : poids mesuré entre 60 kg et 70 kg).
+    \item \textbf{Variables qualitatives et quantitatives} :
+    \begin{itemize}
+        \item \textit{Qualitative} : regroupe des modalités non numériques (exemple : couleurs).
+        \item \textit{Quantitative} : associée à des valeurs numériques.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Représentation des données}
+\begin{itemize}
+    \item \textbf{Diagramme en bâtons} : pour les variables discrètes.
+    \item \textbf{Histogramme} : pour les variables continues, où l’aire des rectangles correspond à l’effectif.
+    \item \textbf{Fonction de répartition} : permet de répondre à des questions comme "combien d’élèves ont une note inférieure ou égale à 4 ?".
+\end{itemize}
+
+\subsection*{Caractéristiques de position}
+\begin{itemize}
+    \item \textbf{Mode} : valeur la plus fréquente (exemple : 4 est le mode si 3 élèves ont eu cette note).
+    \item \textbf{Médiane} : valeur qui sépare la série en deux parties égales. Exemple : si 10 élèves passent un examen, la médiane est la moyenne des notes des 5e et 6e élèves.
+    \item \textbf{Moyenne} : somme des valeurs divisée par leur nombre.
+    \[
+    \bar{x} = \frac{\sum (x_i \cdot n_i)}{N}.
+    \]
+\end{itemize}
+
+\subsection*{Caractéristiques de dispersion}
+\begin{itemize}
+    \item \textbf{Étendue} : différence entre la valeur maximale et minimale.
+    \item \textbf{Variance et écart-type} :
+    \[
+    \text{Var}(x) = \frac{\sum (x_i - \bar{x})^2 n_i}{N}.
+    \]
+    L’écart-type est la racine carrée de la variance ($\sigma$), indiquant l’écart moyen autour de la moyenne.
+\end{itemize}
+
+\section*{Statistiques bivariées}
+
+\subsection*{Analyse des relations entre deux variables}
+\begin{itemize}
+    \item \textbf{Distributions conditionnelles et marginales} :
+    \begin{itemize}
+        \item \textit{Marginale} : répartition de chaque variable indépendamment (somme sur les lignes ou colonnes).
+        \item \textit{Conditionnelle} : répartition d’une variable en fixant une modalité de l’autre.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Mesures de dépendance}
+\begin{itemize}
+    \item Objectif : vérifier si deux variables sont indépendantes ou non. La statistique du $\chi^2$ est donnée par :
+    \[
+    D_{\chi^2} = n \sum_{j=1}^J \sum_{k=1}^K \frac{(f_{jk} - f_{j\cdot} f_{\cdot k})^2}{f_{j\cdot} f_{\cdot k}}.
+    \]
+    \item Les coefficients mesurant la dépendance :
+    \begin{itemize}
+        \item $\phi = \sqrt{\frac{D_{\chi^2}}{n}}$ : intensité de la relation.
+        \item $V$ de Cramér : plus précis pour les tableaux non carrés.
+    \end{itemize}
+    \item Interprétation de $V$ :
+    \begin{itemize}
+        \item $V < 0.1$ : relation faible ou nulle.
+        \item $V > 0.3$ : relation forte.
+    \end{itemize}
+\end{itemize}
+
+\section*{Régression linéaire}
+
+\subsection*{Nuage de points}
+Chaque individu est représenté par un point $(x_i, y_i)$. Le point moyen est donné par $(\bar{x}, \bar{y})$, centre de gravité du nuage.
+
+\subsection*{Méthode des moindres carrés}
+\begin{itemize}
+    \item L’objectif est de minimiser la somme des carrés des distances verticales entre les points et la droite de régression :
+    \[
+    a = \frac{\text{Cov}(x, y)}{\sigma_x^2}, \quad b = \bar{y} - a\bar{x}.
+    \]
+    \item La covariance est calculée par :
+    \[
+    \text{Cov}(x, y) = m(xy) - \bar{x} \bar{y}.
+    \]
+\end{itemize}
+
+\subsection*{Coefficient de corrélation linéaire ($r$)}
+\[
+r = \frac{\text{Cov}(x, y)}{\sigma_x \sigma_y}.
+\]
+$r = 1$ ou $r = -1$ indique une relation parfaitement linéaire.
+
+\section*{Tests statistiques}
+
+\subsection*{Hypothèses et p-value}
+\begin{itemize}
+    \item L’hypothèse nulle ($H_0$) est la proposition initiale à tester.
+    \item La p-value est la probabilité d’erreur si $H_0$ est rejetée.
+    \item On rejette $H_0$ si $p \leq \alpha$ (généralement $\alpha = 0.05$).
+\end{itemize}
+
+\subsection*{Test du $\chi^2$}
+Le test du $\chi^2$ permet de tester l’indépendance entre deux variables qualitatives.
+
+\subsection*{ANOVA à un Facteur}
+L’ANOVA évalue si une variable qualitative (facteur) explique une différence significative entre les moyennes d’une variable quantitative.
+
+\end{document}

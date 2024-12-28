@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             professeursList.innerHTML += `
                 <div class="list-group-item">
                     <h5>${professeur.matiere}</h5>
-                    <p><strong>Nom :</strong> ${professeur.nom}</p>
-                    <p><strong>Email :</strong> <a href="mailto:${professeur.email}">${professeur.email}</a></p>
+                    <p><i class="fas fa-user"></i> <strong>Nom :</strong> ${professeur.nom}</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email :</strong> <a href="mailto:${professeur.email}">${professeur.email}</a></p>
                 </div>`;
         });
     })

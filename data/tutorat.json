@@ -116,10 +116,6 @@
               {
                 "titre": "Synthèse cours",
                 "chemin": "files/l1/algo/intro_algo.pdf"
-              },
-              {
-                "titre": "Sources LaTeX",
-                "chemin": "files/l1/algo/intro_algo.tex"
               }
             ]
           },
@@ -136,7 +132,7 @@
               },
               {
                 "titre": "Sources Java",
-                "chemin": "files/l1/algo/exos_algo.java"
+                "chemin": "files/l1/algo/exos_algo.zip"
               }
             ]
           }

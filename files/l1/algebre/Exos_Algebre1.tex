@@ -1,0 +1,67 @@
+\section*{Exercices}
+\subsection*{Partie 1 : Espaces Vectoriels}
+\begin{enumerate}
+    \item \textbf{Vérification des axiomes} : 
+    Montrer que l'ensemble \( V = \{(x, y) \in \mathbb{R}^2 \mid x, y \in \mathbb{R}\} \), muni des opérations usuelles d'addition et de multiplication par un scalaire, est un espace vectoriel.
+    
+    \item \textbf{Espaces vectoriels de fonctions} : 
+    Soit \( V = C([0, 1]) \), l'ensemble des fonctions continues définies sur \([0, 1]\). Vérifiez que \( V \) est un espace vectoriel sur \( \mathbb{R} \). Justifiez.
+    
+    \item \textbf{Sous-ensemble non vectoriel} : 
+    L'ensemble \( W = \{(x, y) \in \mathbb{R}^2 \mid x > 0\} \) est-il un espace vectoriel ? Justifiez.
+\end{enumerate}
+
+\subsection*{Partie 2 : Sous-Espaces Vectoriels}
+\begin{enumerate}
+    \item \textbf{Vérification d'un sous-espace} : 
+    Démontrer que \( W = \{(x, y, z) \in \mathbb{R}^3 \mid x + y + z = 0\} \) est un sous-espace vectoriel de \( \mathbb{R}^3 \).
+
+    \item \textbf{Intersection de sous-espaces} : 
+    Soient \( W_1 = \{(x, y, z) \in \mathbb{R}^3 \mid x + y = 0\} \) et \( W_2 = \{(x, y, z) \in \mathbb{R}^3 \mid y + z = 0\} \). 
+    Déterminez si \( W_1 \cap W_2 \) est un sous-espace vectoriel de \( \mathbb{R}^3 \).
+
+    \item \textbf{Génération d'un sous-espace} : 
+    Trouvez la dimension et une base du sous-espace \( W \) de \( \mathbb{R}^3 \) engendré par les vecteurs \( \mathbf{v}_1 = (1, 2, 1) \), \( \mathbf{v}_2 = (2, 4, 2) \) et \( \mathbf{v}_3 = (0, 0, 1) \).
+\end{enumerate}
+
+\subsection*{Partie 3 : Applications Linéaires}
+\begin{enumerate}
+    \item \textbf{Définition et propriétés} : 
+    Vérifiez si les fonctions suivantes sont des applications linéaires. Justifiez :
+    \begin{itemize}
+        \item \( f : \mathbb{R}^2 \to \mathbb{R}^2 \), \( f(x, y) = (x + y, 2x - y) \),
+        \item \( g : \mathbb{R}^2 \to \mathbb{R}^2 \), \( g(x, y) = (x^2, y^2) \).
+    \end{itemize}
+
+    \item \textbf{Noyau et image} : 
+    Soit \( f : \mathbb{R}^3 \to \mathbb{R}^2 \), définie par \( f(x, y, z) = (x + y, y + z) \). Trouvez une base du noyau \( \ker(f) \) et de l'image \( \operatorname{Im}(f) \).
+
+    \item \textbf{Représentation matricielle} : 
+    Représentez l'application linéaire \( f : \mathbb{R}^2 \to \mathbb{R}^3 \) définie par \( f(x, y) = (x - y, 2x + y, 3y) \) sous forme matricielle.
+\end{enumerate}
+
+\subsection*{Partie 4 : Théorème Fondamental de l'Algèbre Linéaire}
+\begin{enumerate}
+    \item \textbf{Calcul dimensionnel} : 
+    Soit \( f : \mathbb{R}^4 \to \mathbb{R}^3 \) une application linéaire telle que \( \dim(\ker(f)) = 2 \). Quelle est la dimension de l'image \( \operatorname{Im}(f) \) ?
+    
+    \item \textbf{Exemple avec des matrices} : 
+    Soit \( A = \begin{bmatrix}
+    1 & 2 & 3 \\
+    0 & 1 & 4
+    \end{bmatrix} \). Trouvez :
+    \begin{itemize}
+        \item La dimension du noyau de \( A \),
+        \item La dimension de l'image de \( A \),
+        \item Une base pour chacun.
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Partie 5 : Applications à la Géométrie}
+\begin{enumerate}
+    \item \textbf{Transformation géométrique} : 
+    L'application \( f : \mathbb{R}^2 \to \mathbb{R}^2 \) est définie par \( f(x, y) = (2x, 3y) \). Décrivez l'effet de cette transformation sur le plan.
+    
+    \item \textbf{Projection} : 
+    Trouvez la matrice de l'application linéaire \( f : \mathbb{R}^3 \to \mathbb{R}^3 \) qui projette orthogonalement tout vecteur sur le plan \( x + y + z = 0 \).
+\end{enumerate}

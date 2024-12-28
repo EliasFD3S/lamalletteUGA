@@ -1,0 +1,98 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=1in}
+
+\title{Exercices de Probabilités}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exercice 1 : Probabilités conditionnelles}
+
+Dans une entreprise, on observe que 70\% des employés sont des hommes et 30\% sont des femmes. Parmi les hommes, 60\% travaillent dans le département A et 40\% dans le département B. Parmi les femmes, 40\% travaillent dans le département A et 60\% dans le département B.
+
+On choisit un employé au hasard. Soit les événements suivants :
+\begin{itemize}
+    \item $H$ : l’employé est un homme,
+    \item $F$ : l’employé est une femme,
+    \item $A$ : l’employé travaille dans le département A,
+    \item $B$ : l’employé travaille dans le département B.
+\end{itemize}
+
+\begin{enumerate}
+    \item Quelle est la probabilité qu’un employé choisi au hasard travaille dans le département A ?
+    \item On sait que l’employé choisi travaille dans le département A. Quelle est la probabilité que cet employé soit un homme ?
+    \item Quelle est la probabilité qu’un employé choisi au hasard travaille dans le département A sachant qu’il est un homme ?
+\end{enumerate}
+
+\subsection*{Correction}
+
+\textbf{1. Calcul de la probabilité que l’employé travaille dans le département A}
+
+La probabilité qu’un employé travaille dans le département A est donnée par la loi des probabilités totales :
+\[
+P(A) = P(A | H)P(H) + P(A | F)P(F),
+\]
+où $P(H) = 0.70$, $P(F) = 0.30$, $P(A | H) = 0.60$, $P(A | F) = 0.40$.
+
+Ainsi,
+\[
+P(A) = 0.60 \times 0.70 + 0.40 \times 0.30 = 0.42 + 0.12 = 0.54.
+\]
+
+La probabilité qu’un employé choisi au hasard travaille dans le département A est donc $P(A) = 0.54$.
+
+\textbf{2. Probabilité que l’employé soit un homme sachant qu’il travaille dans le département A}
+
+\[
+P(H | A) = \frac{P(A | H)P(H)}{P(A)} = \frac{0.60 \times 0.70}{0.54} = \frac{0.42}{0.54} \approx 0.7778.
+\]
+
+La probabilité que l’employé soit un homme sachant qu’il travaille dans le département A est environ $0.7778$ ou $77.78\%$.
+
+\textbf{3. Probabilité que l’employé travaille dans le département A sachant qu’il est un homme}
+
+\[
+P(A | H) = 0.60.
+\]
+
+\section*{Exercice 2 : Fonction de répartition}
+
+Soit $X$ une variable aléatoire discrète ayant la loi suivante :
+
+\[
+\begin{array}{c|c|c|c}
+X & -1 & 0 & 1 \\
+\hline
+P(X) & 0.2 & 0.5 & 0.3 \\
+\end{array}
+\]
+
+Calculez la fonction de répartition $F_X(x)$.
+
+\subsection*{Correction}
+
+La fonction de répartition $F_X(x) = P(X \leq x)$ est calculée comme suit :
+\begin{itemize}
+    \item $F_X(x) = 0$ pour $x < -1$,
+    \item $F_X(x) = 0.2$ pour $-1 \leq x < 0$,
+    \item $F_X(x) = 0.2 + 0.5 = 0.7$ pour $0 \leq x < 1$,
+    \item $F_X(x) = 0.2 + 0.5 + 0.3 = 1$ pour $x \geq 1$.
+\end{itemize}
+
+Ainsi, la fonction de répartition est une fonction en escalier avec les valeurs suivantes :
+\[
+F_X(-2) = 0, \quad F_X(-1) = 0.2, \quad F_X(0) = 0.7, \quad F_X(1) = 1.
+\]
+
+...
+
+\end{document}

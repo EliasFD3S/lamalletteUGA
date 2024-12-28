@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+\title{Cours d'Algèbre Linéaire : \\ Espaces Vectoriels, Sous-Espaces Vectoriels et Applications Linéaires}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction}
+L'algèbre linéaire est une branche des mathématiques fondamentales, essentielle dans plusieurs domaines, notamment la physique, l'informatique, et l'économie. Ce cours aborde trois concepts clés : les espaces vectoriels, les sous-espaces vectoriels et les applications linéaires.
+
+\section{Espaces Vectoriels}
+\subsection*{Définition}
+Un \textbf{espace vectoriel} est un ensemble \( V \) muni de deux opérations :
+\begin{itemize}
+    \item \textbf{Addition} \( + : V \times V \to V \),
+    \item \textbf{Multiplication par un scalaire} \( \cdot : \mathbb{K} \times V \to V \),
+\end{itemize}
+où \( \mathbb{K} \) est un corps (souvent \( \mathbb{R} \) ou \( \mathbb{C} \)).
+
+Ces opérations doivent satisfaire les 8 axiomes suivants :
+\begin{enumerate}
+    \item \textbf{Associativité de l'addition} : \( u + (v + w) = (u + v) + w \),
+    \item \textbf{Commutativité de l'addition} : \( u + v = v + u \),
+    \item \textbf{Élément neutre pour l'addition} : Il existe \( 0 \in V \) tel que \( u + 0 = u \),
+    \item \textbf{Inverse pour l'addition} : Pour tout \( u \in V \), il existe \( -u \in V \) tel que \( u + (-u) = 0 \),
+    \item \textbf{Compatibilité avec la multiplication scalaire} : \( \alpha \cdot (u + v) = \alpha \cdot u + \alpha \cdot v \),
+    \item \textbf{Distributivité sur les scalaires} : \( (\alpha + \beta) \cdot u = \alpha \cdot u + \beta \cdot u \),
+    \item \textbf{Associativité de la multiplication scalaire} : \( \alpha \cdot (\beta \cdot u) = (\alpha \beta) \cdot u \),
+    \item \textbf{Multiplication par l'identité} : \( 1 \cdot u = u \).
+\end{enumerate}
+
+\subsection*{Exemples}
+\begin{itemize}
+    \item \( \mathbb{R}^n \) avec l'addition et la multiplication classique.
+    \item L'ensemble des polynômes de degré inférieur ou égal à \( n \), \( \mathbb{P}_n(\mathbb{R}) \).
+    \item L'espace des fonctions continues \( C([a, b]) \).
+\end{itemize}
+
+\section{Sous-Espaces Vectoriels}
+\subsection*{Définition}
+Un \textbf{sous-espace vectoriel} \( W \) d'un espace vectoriel \( V \) est un sous-ensemble de \( V \) qui :
+\begin{enumerate}
+    \item Contient l'élément neutre \( 0 \),
+    \item Est fermé pour l'addition : Si \( u, v \in W \), alors \( u + v \in W \),
+    \item Est fermé pour la multiplication par un scalaire : Si \( \alpha \in \mathbb{K} \) et \( u \in W \), alors \( \alpha \cdot u \in W \).
+\end{enumerate}
+
+\subsection*{Exemples}
+\begin{itemize}
+    \item \( \{(x, y) \in \mathbb{R}^2 \mid y = 0 \} \) est un sous-espace de \( \mathbb{R}^2 \).
+    \item L'ensemble des solutions d'un système linéaire homogène \( A \mathbf{x} = 0 \).
+\end{itemize}
+
+\section{Applications Linéaires}
+\subsection*{Définition}
+Une \textbf{application linéaire} \( f : V \to W \) entre deux espaces vectoriels \( V \) et \( W \) est une fonction qui vérifie :
+\begin{enumerate}
+    \item \( f(u + v) = f(u) + f(v) \) pour tous \( u, v \in V \),
+    \item \( f(\alpha \cdot u) = \alpha \cdot f(u) \) pour tout \( \alpha \in \mathbb{K} \) et \( u \in V \).
+\end{enumerate}
+
+\subsection*{Exemples}
+\begin{itemize}
+    \item \( f : \mathbb{R}^2 \to \mathbb{R}^2 \), définie par \( f(x, y) = (2x, 3y) \).
+    \item Dérivation \( D : C^1([a, b]) \to C([a, b]) \), \( D(f) = f' \).
+\end{itemize}
+
+\subsection*{Représentation par des Matrices}
+Toute application linéaire \( f : \mathbb{R}^n \to \mathbb{R}^m \) peut être représentée par une matrice \( A \in M_{m \times n}(\mathbb{R}) \), telle que pour tout vecteur \( \mathbf{x} \in \mathbb{R}^n \),
+\[
+f(\mathbf{x}) = A \mathbf{x}.
+\]
+
+\subsubsection*{Exemple}
+Considérons l'application \( f : \mathbb{R}^2 \to \mathbb{R}^3 \) définie par :
+\[
+f(x, y) = (x + y, 2x - y, x).
+\]
+Sa matrice associée dans les bases canoniques est :
+\[
+A = \begin{bmatrix}
+1 & 1 \\
+2 & -1 \\
+1 & 0
+\end{bmatrix}.
+\]
+
+\subsection*{Noyau et Image}
+\begin{itemize}
+    \item \textbf{Noyau} : \( \ker(f) = \{\mathbf{v} \in V \mid f(\mathbf{v}) = 0 \} \), sous-espace de \( V \).
+    \item \textbf{Image} : \( \operatorname{Im}(f) = \{f(\mathbf{v}) \mid \mathbf{v} \in V \} \), sous-espace de \( W \).
+\end{itemize}
+
+\subsection*{Théorème Fondamental}
+Pour toute application linéaire \( f : V \to W \),
+\[
+\dim(V) = \dim(\ker(f)) + \dim(\operatorname{Im}(f)).
+\]
+
+\section*{Exercices}
+\begin{enumerate}
+    \item Démontrer que l'ensemble \( W = \{(x, y, z) \in \mathbb{R}^3 \mid x + y + z = 0\} \) est un sous-espace de \( \mathbb{R}^3 \).
+    \item Trouver le noyau et l'image de l'application linéaire \( f : \mathbb{R}^3 \to \mathbb{R}^2 \) définie par \( f(x, y, z) = (x + y, y + z) \).
+    \item Représenter l'application \( f : \mathbb{R}^2 \to \mathbb{R}^3 \), donnée par \( f(x, y) = (x - y, x + y, 2x) \), par une matrice.
+    \item Montrer que l'ensemble des matrices symétriques \( S_n(\mathbb{R}) \) est un sous-espace de \( M_n(\mathbb{R}) \).
+\end{enumerate}
+
+\section*{Conclusion}
+Ce cours a introduit les bases des espaces vectoriels, leurs sous-espaces et les applications linéaires, notamment leur représentation matricielle. Ces concepts sont essentiels pour des sujets avancés comme les transformations linéaires, les valeurs propres et les applications pratiques en sciences.
+
+\end{document}

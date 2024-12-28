@@ -1,0 +1,120 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\geometry{a4paper, margin=1in}
+
+\title{Synthèse du cours de Probabilités}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{Variables aléatoires}
+
+\subsection{Probabilité conditionnelle}
+
+Soient $(\Omega,\mathcal{A}, P)$ un espace de probabilité et $B$ un événement tel que $P(B) \neq 0$. On appelle probabilité conditionnelle de $A$ sachant $B$, le réel
+\[
+P(A | B) = \frac{P(A \cap B)}{P(B)}.
+\]
+
+Propriétés :
+\begin{itemize}
+    \item Soit $B$ un événement tel que $P(B) \neq 0$, alors, pour tout $A \in \mathcal{A}$, on a :
+    \[
+    P(A \cap B) = P(B) P(A | B).
+    \]
+    \item Soient $A$ et $B$ deux événements de probabilité non nulle. Les trois conditions sont équivalentes :
+    \begin{enumerate}
+        \item $A$ et $B$ sont indépendants : $P(A \cap B) = P(A) \cdot P(B)$.
+        \item $P(A | B) = P(A)$.
+        \item $P(B | A) = P(B)$.
+    \end{enumerate}
+    \item Soit $B \in \mathcal{A}$ tel que $0 < P(B) < 1$. Alors, pour tout $A \in \mathcal{A}$, on a :
+    \[
+    P(A) = P(A | B)P(B) + P(A | B^c)P(B^c).
+    \]
+\end{itemize}
+
+\subsection{Formule des Probabilités Totales}
+
+Soit $(B_i)_{i \in I}$ (avec $I \subseteq \mathbb{N}$ fini ou non) une famille d'événements deux à deux incompatibles telle que : $\forall i \in I, P(B_i) \neq 0$ et $\bigcup_{i \in I} B_i = \Omega$. Alors, pour tout événement $A \in \mathcal{A}$, on a :
+\[
+P(A) = \sum_{i \in I} P(A \cap B_i) = \sum_{i \in I} P(A|B_i)P(B_i).
+\]
+
+\subsection{Loi de probabilité}
+
+Si $X : \Omega \to \mathbb{R}$ est une variable aléatoire réelle discrète, alors $X(\Omega) = \{X(\omega) : \omega \in \Omega\}$ est un ensemble dénombrable. 
+
+On appelle loi de probabilité (ou distribution de probabilité) de la variable $X$, l'application $f$ :
+\[
+f : X(\Omega) \to [0, 1], \quad x \mapsto P(X = x).
+\]
+
+\subsection{Fonction de répartition}
+
+On appelle fonction de répartition (f.d.r.) d'une variable aléatoire $X$, la fonction $F_X$ définie sur $\mathbb{R}$ par :
+\[
+F_X(x) = P(X \leq x).
+\]
+
+\subsection{Espérance}
+
+On appelle espérance mathématique de $X$, le nombre $E(X)$ défini par :
+\[
+E(X) = \sum_{k \in E} k \cdot P(X = k).
+\]
+
+\subsection{Variance}
+
+La variance d'une variable aléatoire $X$ est définie par :
+\[
+V(X) = E((X - E(X))^2).
+\]
+
+\subsection{Écart type}
+
+L'écart type de la variable aléatoire $X$ est donné par :
+\[
+\sigma(X) = \sqrt{\text{Var}(X)}.
+\]
+
+\section{Lois usuelles discrètes}
+
+\subsection{Loi de Bernoulli}
+Une variable $X$ suit une loi de Bernoulli de paramètre $p$ si :
+\[
+P(X = 1) = p \quad \text{et} \quad P(X = 0) = 1 - p.
+\]
+
+\subsection{Loi Binomiale}
+...
+
+\subsection{Loi de Poisson}
+...
+
+\section{Éléments d'analyse combinatoire}
+
+\subsection{Règles de base}
+\begin{enumerate}
+    \item \textbf{Principe additif} : ...
+    \item \textbf{Principe multiplicatif} : ...
+\end{enumerate}
+
+\subsection{Arrangements}
+...
+
+\subsection{Combinaisons}
+...
+
+\section{Indépendance des événements}
+...
+
+\end{document}

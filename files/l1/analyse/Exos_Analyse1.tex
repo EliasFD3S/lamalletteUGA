@@ -1,0 +1,416 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\section*{Projet : Analyse 1 - Exercices}
+
+\subsection*{Logique}
+
+\textbf{Exercice 1} (Tiré du Partiel 2022--2023)
+\begin{enumerate}
+    \item Formaliser à l'aide de quantificateurs : \\
+    ``Pour que le produit de deux nombres réels soit négatif, il faut qu'au moins un de ces deux nombres soit négatif ou nul.'' \\
+    \[
+    \forall x, y \in \mathbb{R}, (xy \leq 0 \implies x \leq 0 \; \text{ou} \; y \leq 0)
+    \]
+
+    \item Compléter l'expression suivante en vous inspirant de l'exemple ci-dessus pour formaliser ``pour que le produit de deux nombres réels soit strictement négatif'' :
+    \[
+    \forall x, y \in \mathbb{R}, (xy > 0 \implies (x > 0 \; \text{et} \; y > 0) \; \text{ou} \; (x < 0 \; \text{et} \; y < 0))
+    \]
+\end{enumerate}
+
+\textbf{Exercice 2} Montrer : \(\forall x \in \mathbb{R}^{*+}, \exists y \in \mathbb{R}, 4x - 3y > 0\)
+\begin{itemize}
+    \item Correction : \\
+    On résout \(4x - 3y > 0\) :
+    \[
+    \iff 4x > 3y \implies y < \frac{4}{3}x
+    \]
+    Il suffit de trouver une valeur de \(y\) qui dépend de \(x\). Sachant que \(x > 0\), on peut poser :
+    \[
+    y = \frac{4}{3}x - 1
+    \]
+    Alors, \(y < \frac{4}{3}x\). Finalement :
+    \[
+    \forall x \in \mathbb{R}^{*+}, \exists y = \frac{4}{3}x - 1, \; 4x - 3y = \frac{8x}{3} + 1 > 0
+    \]
+\end{itemize}
+
+\textbf{Exercice 3} (Hybride Analyse/Informatique) \\
+Soit la proposition suivante : \\
+``Si \(n\) est divisible par 6, alors \(n\) est divisible par 2 et \(n\) est divisible par 3.'' \\
+\begin{enumerate}
+    \item Formaliser en langage informatique (Java) :
+    \[
+    (n \% 6 \texttt{==} 0) \implies ((n \% 2 \texttt{==} 0) \; \mathrel{\&\&} \; (n \% 3 \texttt{==} 0))
+    \]
+
+    \item Montrer que sa contraposée est équivalente à l'énoncé initial.
+    \begin{itemize}
+        \item Rappel : \(n\) est divisible par \(a \iff n \% a \texttt{==} 0\).
+        \item On peut écrire \(P\) comme :
+        \[
+        (n \% 6 \texttt{==} 0) \implies ((n \% 2 \texttt{==} 0) \; \mathrel{\&\&} \; (n \% 3 \texttt{==} 0))
+        \]
+
+        On utilise : \(P \implies Q \iff (\text{non } P) \; \text{ou} \; Q\). \\
+        Soit :
+        \[
+        !(n \% 6 \texttt{==} 0) \; \texttt{||} \; ((n \% 2 \texttt{==} 0) \; \mathrel{\&\&} \; (n \% 3 \texttt{==} 0))
+        \]
+        \[
+        \iff (n \% 6 \texttt{!=} 0) \; \texttt{||} \; ((n \% 2 \texttt{==} 0) \; \mathrel{\&\&} \; (n \% 3 \texttt{==} 0))
+        \]
+
+        \item Contraposée : 
+        \[
+        \text{non } Q \implies \text{non } P
+        \]
+        Ici, \(\text{non } Q \iff !(n \% 2 \texttt{==} 0) \; \texttt{||} \; !(n \% 3 \texttt{==} 0)\). \\
+        On utilise : \(\text{non }(A \; \text{et} \; B) \iff \text{non } A \; \text{ou} \; \text{non } B\). \\
+        Donc :
+        \[
+        \text{non } Q \iff (n \% 2 \texttt{!=} 0) \; \texttt{||} \; (n \% 3 \texttt{!=} 0)
+        \]
+
+        \[
+        \text{non } P \iff (n \% 6 \texttt{!=} 0)
+        \]
+
+        On obtient :
+        \[
+        (n \% 2 \texttt{!=} 0) \; \texttt{||} \; (n \% 3 \texttt{!=} 0) \implies (n \% 6 \texttt{!=} 0)
+        \]
+
+        On utilise de nouveau \(P \implies Q \iff (\text{non } P) \; \text{ou} \; Q\). \\
+        Soit :
+        \[
+        !((n \% 2 \texttt{!=} 0) \; \texttt{||} \; (n \% 3 \texttt{!=} 0)) \; \texttt{||} \; (n \% 6 \texttt{!=} 0)
+        \]
+
+        \[
+        \iff ((n \% 2 \texttt{==} 0) \; \mathrel{\&\&} \; (n \% 3 \texttt{==} 0)) \; \texttt{||} \; (n \% 6 \texttt{!=} 0)
+        \]
+
+        On retrouve bien l'expression de la question 1.
+    \end{itemize}
+\end{enumerate}
+
+\subsection*{Suites}
+
+\textbf{Exercice 4} \\
+
+Soit \(A = \left\{\frac{2^n}{2^n - 1} \mid n \in \mathbb{N}^*\right\}\) \\
+
+Déterminer si \(A\) admet une borne supérieure et/ou une borne inférieure, si oui, les déterminer. \\
+(Indication : considérer une suite) \\
+
+Correction : \\
+Posons \(U_n = \frac{2^n}{2^n - 1}\). Alors, \(\frac{U_{n+1}}{U_n} = \frac{\frac{2^{n+1}}{2^{n+1}-1}}{\frac{2^n-1}{2^n}} = 2 \times \frac{2^n - 1}{2^{n+1} - 1} < 1\). \\
+
+Or \( n \geq 1 \), et ainsi \( 2^n \geq 1 \) et \( 2^n - 1 \geq 0 \), donc
+\[
+U_n = \frac{2^n}{2^n - 1} > 0.
+\] \\
+Donc \((U_n)\) est strictement décroissante. \\
+Ainsi, \(\sup(A) = U_1 = \frac{2^1}{2^1 - 1} = 2\). \\
+\(\inf(A) = \lim_{n \to +\infty} \frac{2^n}{2^n - 1} = \lim_{n \to +\infty} \frac{2^n}{2^n(1 - \frac{1}{2^n})} = 1\).\\
+
+\textbf{Exercice 5} : Variation de suites
+
+Étudier le sens de variation de la suite \((U_n)\) définie par : 
+\begin{enumerate}
+    \item \(U_n = 1 + \frac{1}{n}\), pour tout \(n \in \mathbb{N}^*\).
+    \item \(U_n = \frac{-2}{n+4}\), pour tout \(n \in \mathbb{N}\).
+    \item \(U_n = \frac{1}{n+1} - \frac{1}{n}\), pour tout \(n \in \mathbb{N}^*\).
+\end{enumerate}
+
+Correction :
+\begin{enumerate}
+    \item Soit \(n \in \mathbb{N}^*\), \(U_{n+1} - U_n = 1 + \frac{1}{n+1} - \left(1 + \frac{1}{n}\right) = 1 - 1 + \frac{1}{n+1} - \frac{1}{n} = \frac{n - (n+1)}{n(n+1)} = -\frac{1}{n(n+1)} < 0\) car \(n > 0\). \\
+    Donc \((U_n)\) est strictement décroissante.
+    
+    \item Soit \(n \in \mathbb{N}\), \(U_{n+1} - U_n = \frac{-2}{n+5} - \frac{-2}{n+4} = \frac{-2}{n+5} + \frac{2}{n+4}\). \\
+    Or \(\frac{2}{n+5} < \frac{2}{n+4}\), donc \(U_{n+1} - U_n > 0\). \\
+    Pour tout \(n \in \mathbb{N}\), \(U_{n+1} - U_n > 0 \iff (U_n)\) est strictement croissante.
+
+    \item Soit \(n \in \mathbb{N}^*\), \(U_{n+1} - U_n = \frac{1}{n+2} - \frac{1}{n+1} - \frac{1}{n+1} + \frac{1}{n} = \frac{1}{n+2} - \frac{2}{n+1} + \frac{1}{n} = \frac{(n+1) - 2(n+2)}{(n+1)(n+2)} + \frac{1}{n} = \frac{-1}{n+2} + \frac{1}{n} = \frac{-n + n + 2}{n(n+2)} = \frac{2}{n(n+2)} > 0\). \\
+    Pour tout \(n \in \mathbb{N}^*\), \(U_{n+1} - U_n > 0 \iff (U_n)\) est strictement croissante.
+\end{enumerate}
+
+\textbf{Exercice 6} : Terme général d'une suite définie par récurrence
+
+Soit \((U_n)\) la suite définie par :
+\[
+U_0 = 2, \quad U_{n+1} = 2U_n + 3 \quad \text{pour tout } n \in \mathbb{N}.
+\]
+Déterminer le terme général de la suite \((U_n)\).
+
+\textbf{Correction}
+
+D'après le cours, il existe \(\alpha\) tel que \(v_n = U_n - \alpha\) soit géométrique de raison 2. 
+
+Alors, on a :
+\[
+v_{n+1} = U_{n+1} - \alpha = 2U_n + 3 - \alpha.
+\]
+On souhaite que cette quantité soit égale à \(2v_n = 2(U_n - \alpha)\). Cela donne :
+\[
+2U_n + 3 - \alpha = 2U_n - 2\alpha.
+\]
+En simplifiant, on obtient :
+\[
+3 - \alpha = -2\alpha \quad \text{d'où} \quad \alpha = -3.
+\]
+
+Ainsi, on a \(v_n = v_0 \times 2^n\), avec \(v_0 = U_0 - \alpha = 2 - (-3) = 5\).
+
+On en conclut que \(U_n = v_n + \alpha = v_n - 3 = 5 \times 2^n - 3 = 2^{n+2} - 3\).
+
+\subsection*{Application à la finance}
+{\textbf{Exercice 7}: 
+{\textbf{Exercice 8 }: 
+
+\subsection*{ Convergence des suites}
+
+{\textbf{Exercice 9 }: Soit \( U_n = \frac{2n+1}{4n+5} \)} 
+
+Calculer \( U_0 \), \( U_{10} \) et \( U_{100} \).
+
+Conjecturer la limite de \( (U_n) \) et la montrer grâce à la définition.
+
+\textbf{Correction}
+
+\[
+U_0 = \frac{1}{5}, \quad U_{10} = \frac{21}{45} \approx 0.467, \quad U_{100} = \frac{201}{405} \approx 0.496.
+\]
+
+\( U_n \) semble tendre vers \( \frac{1}{2} \). Intuitivement, on voit que le \( +1 \) au numérateur et le \( +5 \) au dénominateur deviennent négligeables pour \( n \) grand, et donc la fraction se rapproche de \( \frac{2n}{4n} = \frac{1}{2} \).
+
+Soit \( \epsilon > 0 \), on cherche \( N \in \mathbb{N} \) tel que pour tout \( n \geq N \),
+\[
+\left| \frac{2n+1}{4n+5} - \frac{1}{2} \right| \leq \epsilon.
+\]
+
+On a :
+\[
+\frac{2n+1}{4n+5} - \frac{1}{2} = \frac{2(2n+1) - 4n - 5}{2(4n+5)} = \frac{4n+2-4n-5}{2(4n+5)} = \frac{-3}{2(4n+5)}.
+\]
+
+Le dénominateur est positif pour \( n \in \mathbb{N} \) et \( -3 < 0 \), donc
+\[
+U_n - \frac{1}{2} < 0 \quad \text{et donc} \quad \left| U_n - \frac{1}{2} \right| = \frac{3}{2(4n+5)}.
+\]
+
+Il faut maintenant montrer que 
+\[
+\frac{3}{2(4n+5)} \leq \epsilon \quad \Longleftrightarrow \quad \frac{3}{2\epsilon} \leq 4n+5.
+\]
+
+Cela revient à 
+\[
+n \geq \frac{3}{2\epsilon} - 5 \quad \Longleftrightarrow \quad n \geq \frac{3}{2\epsilon} \times \frac{1}{4}.
+\]
+
+On peut poser \( N \) tel que
+\[
+N \geq \left\lfloor \frac{3}{2\epsilon} \times \frac{1}{4} \right\rfloor + 1.
+\]
+
+Ainsi, pour \( n \geq N \), on a bien
+\[
+\left| U_n - \frac{1}{2} \right| \leq \epsilon.
+\]
+
+\subsection*{Exercice 10 : Calcul de limites}
+
+\subsubsection*{1) \( U_n = \frac{n^3 - 6}{3n^2 + 4n^4 + 12} \) pour tout \( n \in \mathbb{N}^* \)}
+
+\subsection*{Correction}
+On factorise par les termes de plus haut degré. \\
+On a :
+\[
+U_n = \frac{n^3 - 6}{3n^2 + 4n^4 + 12}.
+\]
+Factorisation :
+\[
+U_n = \frac{n^3(1 - \frac{6}{n^3})}{n^4(3 + \frac{4}{n^2} + \frac{12}{n^4})} \approx \frac{1}{4} \quad \text{lorsque } n \to \infty.
+\]
+
+\subsubsection*{2) \( U_n = \sum_{k=0}^{n} \left( \frac{4}{5} \right)^k \)}
+
+On reconnaît une somme de \( n+1 \) termes d'une suite géométrique avec \( U_0 = 1 \). 
+
+Rappel : suite géométrique \( U_n = U_0 q^k \), ici \( U_0 = 1 \) et \( q = \frac{4}{5} \).
+
+Ainsi, on a :
+\[
+U_n = \frac{1 - \left( \frac{4}{5} \right)^{n+1}}{1 - \frac{4}{5}} = 5 \left( 1 - \left( \frac{4}{5} \right)^{n+1} \right).
+\]
+
+La limite lorsque \( n \to \infty \) est :
+\[
+\lim_{n \to \infty} \left( 1 - \left( \frac{4}{5} \right)^{n+1} \right) = 1.
+\]
+
+Donc, 
+\[
+\lim_{n \to \infty} U_n = 5.
+\]
+
+\subsection*{Exercice 11 : Suite - récurrence}
+
+Soit la suite \( (U_n) \) définie par \( U_0 = 5 \) et \( U_{n+1} = -\frac{1}{2} U_n + 3 \)\\
+
+1) Déterminer le terme général de la suite \( U_n \)\\
+2) Étudier la monotonie de \( (U_n) \)\\
+3) Montrer par récurrence que \( (U_n) \) est bornée par \( \frac{1}{2} \) et 5\\
+4) \( (U_n) \) est-elle convergente ?\\
+
+\textbf{Correction}
+1) On remarque que \( (U_n) \) est une suite arithmético-géométrique de \( a = -\frac{1}{2} \) et \( b = 3 \).
+
+On pose \( \alpha = \frac{b}{1-a} = \frac{3 \times 2}{3} = 2 \).
+
+Soit \( (V_n) \) définie par \( V_n = U_n - \alpha = U_n - 2 \).
+
+On a :
+\[
+V_{n+1} = U_{n+1} - \alpha = -\frac{1}{2} U_n + 3 - 2 = -\frac{1}{2} U_n + 1 = -\frac{1}{2} (U_n - 2) = -\frac{1}{2} V_n.
+\]
+
+Donc, \( V_n \) est une suite géométrique de raison \( -\frac{1}{2} \), et le terme général est :
+\[
+V_n = V_0 \left( -\frac{1}{2} \right)^n = 3 \left( -\frac{1}{2} \right)^n.
+\]
+
+Ainsi, le terme général de \( U_n \) est :
+\[
+U_n = V_n + \alpha = 3 \left( -\frac{1}{2} \right)^n + 2.
+\]
+
+2) 
+
+On étudie \( U_{n+1} - U_n \) :
+\[
+U_{n+1} - U_n = -\frac{9}{2} \left( -\frac{1}{2} \right)^n.
+\]
+Pour \( n \) pair, \( \left( -\frac{1}{2} \right)^n > 0 \), et pour \( n \) impair, \( \left( -\frac{1}{2} \right)^n < 0 \).
+
+Ainsi, \( (U_n) \) n'est pas monotone.
+3) 
+
+On pose la propriété \( P_n : \forall n \in \mathbb{N}, \, \frac{1}{2} \leq U_n \leq 5 \).
+
+\emph{Initialisation :} pour \( n = 0 \), \( U_0 = 5 \) et donc \( P_0 \) est vrai. \\
+\emph{Hérédité :} Supposons que \( P_n \) est vrai pour un \( n \), c'est-à-dire \( \frac{1}{2} \leq U_n \leq 5 \). Montrons que \( P_{n+1} \) est vrai :
+\[
+U_{n+1} = -\frac{1}{2} U_n + 3.
+\]
+En utilisant \( \frac{1}{2} \leq U_n \leq 5 \), on trouve que \( \frac{1}{2} \leq U_{n+1} \leq 5 \).
+
+Donc, \( P_n \) est vraie pour tout \( n \in \mathbb{N} \).
+
+
+
+On conclut que \( \lim_{n \to \infty} U_n = 2 \) car \( U_n \) est bornée et converge vers la solution de l'équation \( U = -\frac{1}{2} U + 3 \), c'est-à-dire \( U = 2 \).
+
+\end{document}
+
+\end{document}
+Exercice 6 : Temrme général d'une suite définie par récurrence 
+
+Soit (Un) la suite définie par { U0 = 2 Un+1=2Un+3
+Déterminer le terme général de (Un)
+
+Correction : D'après le cours il existe alpha tel que vn=un-alpha soit géométrique de raison 2 
+Alors vn+1=Un+1-alpha = 2Un + 3 - alpha et on souhaite que cette quantité soit égale à 2Vn = 2(Un - alpha)
+==> 2Un=3-alpha=2Un - 2alpha <=> 3-alpha = -2alpha <=> alpha=-3
+on a donc Vn=V0 x 2^n avec v0=U0-alpha=1-(-3)=4
+On en conclut que Un = Vn + alpha = Vn - 3 = 4 x 2^n - 3 = 2^2 x 2^n - 3 = 2^(n+2)-3
+
+Subsection {Application à la finance - exercices 7 et 8 à rajouter}
+
+Subsection {Convergence des suites}
+
+Exercice 9 : Soit Un = (2n+1)/(4n+5) 
+
+Calculer U0, u10 et u100
+Conjecturer la limite de (Un) et la montrer grâce à la définition 
+
+Correction : u0=1/5, u10 = 21/45(env= 0,467), u100=201/405 (env= 0,496)
+
+Un semble tendre vers 1/2 (intuitivement on voit que le +1 au numérateur et +5 deviennent négligeables pour n grand : 2n/4n --> 1/2)
+
+Soit avec la définition : 
+(pour tout) (epsilon) > 0, (il existe) N (appartenant à N), (pour tout n) >= N 
+abs((2n+1)/(4n+5)-(1/2)) <= (epsilon)
+Soit (epsilon) > 0 et soit n E 
+(2n+1)/(4n+5)-(1/2) = (2(2n+1)-4n-5)/(2(4n+5))=(4n+2-4n-5)/(2(4n+5))=-3/(2(4n+5))
+Le dénominateur est positif pour n E N et -3<0 ==> Un -(1/2 ) <0 donc abs(Un-(1/2)) = 3/(2(4n+5)) 
+3/(2(4n+5)) <= (epsilon) <=> 3/(2epsilon)<=4n+5 car n>=0 
+<=> n >=(3/(2epsilon)-5)x (1/4)
+Je peux poser N tel que N >= (3/(2epsilon)-5)x (1/4)
+par exemple (Partie entière de) ( (3/(2epsilon)-5)x (1/4))+1
+Donc pour n grand il y a bien : 
+soit n >= N 
+alors par définition n > (3/(2epsilon)-5)x (1/4) 
+J'en déduis 4n>(3/(2epsilon)-5) <=> 4n+5>3/(2epsilon) <=> epsilon >=(3/(2(4n+5)))
+<=> abs(Un-1/2)<=(epsilon)
+
+Exercice 10 : Calcul de limites 
+1) Un = (n^3 - 6)/(3n^2+4n^4+12) (pour tout) n E N*
+
+Correction : On factorise par les termes de plus haut degré 
+//FAIRE LE DETAIL / par somme lim = 1 par somme lim = 4 puis par produit puis par quotient 
+
+2) Un = (Somme de k=0 à n) de (4/5)^k
+On reconnaît une somme de n+1 termes d'une suite géométrique avec U0 = 1 
+(Rappel : suite géométrique Un = U0q^k donc ici U0 = 1 et q=(4/5)
+soit Un = U0 (1-q^(n+1))/(1-q)) CF cours
+= 1-(4/5)^(n+1))/(1-(4/5))= 5x(1-(4/5)^(n+1))
+lim 1 = 1
+lim(4/5)^(n+1) = 0 car (4/5)<1 
+lim 5 = 5 
+
+--> Par somme lim de tout ça = 1 puis par produit lim Un = 5
+
+Exercice 11 : Suite - récurrence 
+
+Soit la suite (Un) n E N def par U0 = 5 et Un+1 = -1/2 Un + 3 
+1) Déterminer le terme général de la suite Un 
+2) Etudier la monotonie de (Un)
+3) Montrer par récurrence que (Un) est bornée par 1/2 et 5 
+4) (Un) est-elle convergente ? 
+
+Correction : 
+1) On remarque que (Un) est une suite artithmético-géométrique de a = -1/2 et b = 3 
+on pose (alpha) = b/(1-a) = 3x(2/3)=2 
+Soit(Vn) déf par Vn= Un - (alpha) = Un - 2 
+Elle vérifie Vn+1= Un+1 - alpha = -1/2 Un + 3 - 2 = -1/2 Un + 1
+= -1/2( Un - 2) = -1/2 Vn 
+Vn suite géométrique de raison -1/2 donc de terme général Vn=V0a^n = (U0-2)(-1/2)^n
+= 3(-1/2)^n
+Ainsi on déduit le terme général de Un : Un = Vn + alpha = 3(-1/2)^n + 2 
+
+2) Monotonie de (Un) 
+Un+1-Un = (INSERE LE DETAIL STP) = (-9/2)(-1/2)^n 
+avec (-9/2)<0 
+Si n pair (-1/2)^n >0 ; si n impair  (-1/2)^n < 0
+Donc (Un) n'est pas monotone 
+
+3) Soit Pn : (pour tout) n E N, (STP FORMALISE la propriété Un bornée par 1/2 et 5) 
+
+Initialisation
+hérédité 
+conclusiob 
+
+4) lim = 2 (Fais le détail simplement stp!!!)
+
+
+
+
+
+\end{document}

@@ -1,6 +1,5 @@
 # LaMalletteUGA
 Site LaMalletteUGA
-https://eliasfd3s.github.io/lamalletteUGA/index.html
 
 Icones pour les fichiers json  :  
 https://fontawesome.com/icons

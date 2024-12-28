@@ -88,11 +88,19 @@
             "fichiers": [
               {
                 "titre": "Exercices probas",
-                "chemin": "files/l1/analyse/Exos_Probas1.pdf"
+                "chemin": "files/l1/probas/Exos_Probas1.pdf"
               },
               {
                 "titre": "Sources LaTeX",
-                "chemin": "files/l1/analyse/Exos_Probas1.tex"
+                "chemin": "files/l1/probas/Exos_Probas1.tex"
+              },
+              {
+                "titre": "CC2",
+                "chemin": "files/l1/probas/CC2.pdf"
+              },
+              {
+                "titre": "Correction CC2",
+                "chemin": "files/l1/probas/CC2correction.pdf"
               }
             ]
           }

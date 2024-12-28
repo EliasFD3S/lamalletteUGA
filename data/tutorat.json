@@ -75,11 +75,11 @@
             "fichiers": [
               {
                 "titre": "Synthèse du cours",
-                "chemin": "files/l1/analyse/Analyse1_SynthèseCours.pdf"
+                "chemin": "files/l1/analyse/Probas1_SynthèseCours.pdf"
               },
               {
                 "titre": "Sources LaTeX",
-                "chemin": "files/l1/analyse/Analyse1_SynthèseCours.tex"
+                "chemin": "files/l1/analyse/Probas1_SynthèseCours.tex"
               }
             ]
           },
@@ -87,12 +87,12 @@
             "titre": "Exercices",
             "fichiers": [
               {
-                "titre": "Exercices AR1",
-                "chemin": "files/l1/analyse/Exos_Analyse1.pdf"
+                "titre": "Exercices probas",
+                "chemin": "files/l1/analyse/Exos_Probas1.pdf"
               },
               {
                 "titre": "Sources LaTeX",
-                "chemin": "files/l1/analyse/Exos_Analyse1.tex"
+                "chemin": "files/l1/analyse/Exos_Probas1.tex"
               }
             ]
           }

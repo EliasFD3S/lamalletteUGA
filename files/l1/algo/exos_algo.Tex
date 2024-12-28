@@ -1,0 +1,548 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Configuration pour les listings de code
+\lstset{
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{orange},
+    numbers=left,
+    numberstyle=\tiny,
+    stepnumber=1,
+    numbersep=5pt,
+    backgroundcolor=\color{white},
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    frame=single,
+    tabsize=2,
+    captionpos=b,
+    breaklines=true,
+    breakatwhitespace=false,
+    escapeinside={\%*}{*)}
+}
+
+\title{Exercices pour Initiation \`a l'informatique et \`a l'algorithmique}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Exo 1}
+\noindent \textbf{Énoncé :} Écrivez un programme qui lit l'\^age en ann\'ees et affiche l'\^age en jours.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class AgeEnJours {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander à l'utilisateur d'entrer son âge
+        System.out.println("Entrez votre age en annees : ");
+        int ageEnAnnees = scanner.nextInt();
+
+        // Calcul de l'âge en jours (approximation : 1 an = 365 jours)
+        int ageEnJours = ageEnAnnees * 365;
+
+        // Affichage du résultat
+        System.out.println("Votre age en jours est d'environ : " + ageEnJours + " jours.");
+
+        // Fermeture du scanner
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 2}
+\noindent \textbf{Énoncé :} Soit $\triangle KPH$ un triangle rectangle en $P$ tel que : $KP = 7,2$ cm et $HP = 15,4$ cm. Écrivez un programme pour calculer la longueur $HK$.
+
+\begin{lstlisting}[language=Java]
+public class TrianglePythagore {
+    public static void main(String[] args) {
+        double KP = 7.2; // Longueur de KP en cm
+        double HP = 15.4; // Longueur de HP en cm
+
+        // Calcul de HK à l'aide du théorème de Pythagore : HK² = KP² + HP²
+        double HK = Math.sqrt(Math.pow(KP, 2) + Math.pow(HP, 2));
+
+        // Affichage du résultat
+        System.out.printf("La longueur de l'hypotenuse HK est : %.2f", HK);
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 3}
+\noindent \textbf{Énoncé :} Écrire un programme Java pour calculer l'aire de trois triangles et afficher la somme totale.
+
+\begin{lstlisting}[language=Java]
+public class SommeAires {
+    public static void main(String[] args) {
+        // Données des triangles
+        double b1 = 5.0, h1 = 7.0; // Base et hauteur du triangle 1
+        double b2 = 8.5, h2 = 6.0; // Base et hauteur du triangle 2
+        double b3 = 10.0, h3 = 4.5; // Base et hauteur du triangle 3
+
+        // Calcul des aires
+        double aire1 = (b1 * h1) / 2;
+        double aire2 = (b2 * h2) / 2;
+        double aire3 = (b3 * h3) / 2;
+
+        // Calcul de la somme des aires
+        double sommeAires = aire1 + aire2 + aire3;
+
+        // Affichage des résultats
+        System.out.println("Aire du triangle 1 : " + aire1 + " cm²");
+        System.out.println("Aire du triangle 2 : " + aire2 + " cm²");
+        System.out.println("Aire du triangle 3 : " + aire3 + " cm²");
+        System.out.println("Somme des aires : " + sommeAires + " cm²");
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 4}
+\noindent \textbf{Énoncé :} Écrivez un programme en Java qui demande \`a l'utilisateur d'entrer un nombre de base et un nombre d'exposant. Le programme doit ensuite calculer la puissance en utilisant une boucle et afficher le r\'esultat.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class PuissanceAvecBoucle {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander à l'utilisateur d'entrer la base et l'exposant
+        System.out.println("Entrez un nombre de base : ");
+        int base = scanner.nextInt();
+        System.out.println("Entrez un nombre d'exposant : ");
+        int exposant = scanner.nextInt();
+
+        // Initialiser le résultat à 1
+        int resultat = 1;
+
+        // Calculer la puissance avec une boucle
+        for (int i = 0; i < exposant; i++) {
+            resultat *= base;
+        }
+
+        // Affichage du résultat
+        System.out.println("Le resultat est : " + resultat);
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 5}
+\noindent \textbf{Énoncé :} Écrivez un programme en Java qui demande \`a l'utilisateur de saisir une cha\^ine de caract\`eres. Le programme doit compter et afficher le nombre de fois o\`u \texttt{xx} appara\^it dans la cha\^ine donn\'ee. Le comptage doit inclure les cas o\`u les \texttt{xx} se chevauchent.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class CompteXX {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander à l'utilisateur d'entrer une chaîne
+        System.out.println("Entrez une chaine : ");
+        String chaine = scanner.nextLine();
+
+        // Initialiser le compteur pour le nombre de "xx"
+        int compteur = 0;
+
+        // Parcourir la chaîne pour compter les "xx" avec chevauchement
+        for (int i = 0; i < chaine.length() - 1; i++) {
+            if (chaine.substring(i, i + 2).equals("xx")) {
+                compteur++;
+            }
+        }
+
+        // Affichage du résultat
+        System.out.println("Le nombre de 'xx' est : " + compteur);
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 6}
+\noindent \textbf{Énoncé :} Créez un programme qui prend deux entiers en entrée, compare leurs valeurs et indique si le premier est égal, inférieur ou supérieur au second.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class CompareIntegers {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander les deux entiers à l'utilisateur
+        System.out.println("Entrez le premier entier : ");
+        int premier = scanner.nextInt();
+        System.out.println("Entrez le deuxieme entier : ");
+        int deuxieme = scanner.nextInt();
+
+        // Comparaison des deux entiers
+        if (premier == deuxieme) {
+            System.out.println("Les entiers sont egaux.");
+        } else if (premier < deuxieme) {
+            System.out.println("Le premier entier est inferieur.");
+        } else {
+            System.out.println("Le premier entier est superieur.");
+        }
+
+        // Fermeture du scanner
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 7}
+\noindent \textbf{Énoncé :} Écrivez un programme en Java qui demande \`a l'utilisateur de saisir deux entiers, \texttt{a} et \texttt{b}. Le programme doit vérifier si l'un des deux nombres est égal \`a 10 ou si leur somme est égale \`a 10.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class TestValeurs {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander les deux entiers à l'utilisateur
+        System.out.println("Entrez deux entiers : ");
+        int a = scanner.nextInt();
+        int b = scanner.nextInt();
+
+        // Vérification des conditions
+        boolean resultat = (a == 10 || b == 10) || (a + b == 10);
+
+        // Affichage du résultat
+        System.out.println("Resultat : " + resultat);
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 8}
+\noindent \textbf{Énoncé :} Écrivez un programme qui, \`a partir d'une cha\^ine de caract\`eres donn\'ee, affiche une version o\`u tous les \texttt{x} ont été supprimés, sauf ceux situés au tout début ou \`a la fin de la cha\^ine.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class SupprimeX {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander une chaîne à l'utilisateur
+        System.out.println("Entrez une chaine : ");
+        String chaine = scanner.nextLine();
+
+        // Vérifier si la chaîne a au moins deux caractères
+        if (chaine.length() <= 1) {
+            System.out.println("Resultat : " + chaine);
+            return;
+        }
+
+        // Garder le premier et le dernier caractère
+        char premier = chaine.charAt(0);
+        char dernier = chaine.charAt(chaine.length() - 1);
+
+        // Extraire la partie intermédiaire et supprimer les 'x'
+        String milieu = chaine.substring(1, chaine.length() - 1).replace("x", "");
+
+        // Construire la nouvelle chaîne
+        String resultat = premier + milieu + dernier;
+
+        // Afficher le résultat
+        System.out.println("Resultat : " + resultat);
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 9}
+\noindent \textbf{Énoncé :} Écrivez un programme qui compte le nombre de fois o\`u la cha\^ine \texttt{code} apparaît dans une cha\^ine donn\'ee, en acceptant n'importe quelle lettre \`a la place du \texttt{d} (par exemple, \texttt{cope} et \texttt{coze} sont aussi comptés).
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class CompteCode {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander une chaîne à l'utilisateur
+        System.out.println("Entrez une chaine : ");
+        String chaine = scanner.nextLine();
+
+        // Initialiser le compteur
+        int compteur = 0;
+
+        // Parcourir la chaîne
+        for (int i = 0; i <= chaine.length() - 4; i++) {
+            // Vérifier si la sous-chaîne correspond à "coXe" (où X est une lettre)
+            if (chaine.charAt(i) == 'c' && chaine.charAt(i + 1) == 'o' &&
+                chaine.charAt(i + 3) == 'e') {
+                compteur++;
+            }
+        }
+
+        // Affichage du résultat
+        System.out.println("Le nombre de 'coXe' est : " + compteur);
+
+        // Fermeture du scanner
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 10}
+\noindent \textbf{Énoncé :} Créez un programme en Java qui lit un nombre entier saisi par l'utilisateur et vérifie s'il est présent dans un tableau de nombres entiers prédéfini. Le programme doit ensuite afficher un message indiquant si le nombre saisi est présent ou non dans le tableau.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class ContientNombre {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire l'entrée utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Définir le tableau
+        int[] tableau = {3, 7, 15, 20, 42, 8, 13, 27};
+
+        // Demander le nombre à rechercher
+        System.out.println("Entrez un nombre a rechercher : ");
+        int nombreRecherche = scanner.nextInt();
+
+        // Initialiser une variable pour suivre si le nombre est trouvé
+        boolean trouve = false;
+
+        // Parcourir le tableau pour rechercher le nombre
+        for (int nombre : tableau) {
+            if (nombre == nombreRecherche) {
+                trouve = true;
+            }
+        }
+
+        // Afficher le résultat
+        if (trouve) {
+            System.out.println("Le nombre est present dans le tableau.");
+        } else {
+            System.out.println("Le nombre n'est pas present dans le tableau.");
+        }
+
+        // Fermeture du scanner
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 11}
+\noindent \textbf{Énoncé :} Créez un programme qui commence par rechercher le plus petit et le plus grand nombre dans un tableau donné. Ensuite, il calcule la somme de ces deux nombres. \`A partir de cette somme, le programme génère un nouveau tableau contenant tous les nombres entiers consécutifs, de 1 jusqu’\`a la somme obtenue.
+
+\begin{lstlisting}[language=Java]
+import java.util.Scanner;
+
+public class TableauCalcul {
+    public static void main(String[] args) {
+        // Création d'un scanner pour lire les entrées utilisateur
+        Scanner scanner = new Scanner(System.in);
+
+        // Demander la taille du tableau
+        System.out.println("Entrez la taille du tableau : ");
+        int taille = scanner.nextInt();
+
+        // Déclarer le tableau
+        int[] tableau = new int[taille];
+
+        // Remplir le tableau avec des valeurs
+        System.out.println("Entrez les éléments du tableau : ");
+        for (int i = 0; i < taille; i++) {
+            tableau[i] = scanner.nextInt();
+        }
+
+        // Rechercher le plus petit et le plus grand nombre dans le tableau
+        int min = tableau[0];
+        int max = tableau[0];
+
+        for (int i = 1; i < tableau.length; i++) {
+            if (tableau[i] < min) {
+                min = tableau[i];
+            }
+            if (tableau[i] > max) {
+                max = tableau[i];
+            }
+        }
+
+        // Calculer la somme des deux nombres
+        int somme = min + max;
+
+        // Créer un tableau allant de 1 à la somme
+        int[] tableauRange = new int[somme];
+
+        for (int i = 0; i < somme; i++) {
+            tableauRange[i] = i + 1;  // Remplir le tableau avec les nombres de 1 à somme
+        }
+
+        // Afficher le tableau résultant
+        System.out.println("Le tableau généré allant de 1 à " + somme + " est : ");
+        for (int i : tableauRange) {
+            System.out.print(i + " ");
+        }
+
+        // Fermeture du scanner
+        scanner.close();
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 12}
+\noindent \textbf{Énoncé :} Créez un programme qui demande à l'utilisateur de saisir trois phrases via la console. Écrivez ces phrases, ligne par ligne, dans un fichier nommé 	exttt{phrases.txt} à l'aide de 	exttt{BufferedWriter}. Finalement, lisez le contenu du fichier ligne par ligne à l'aide de 	exttt{BufferedReader} et affichez chaque ligne dans la console.
+
+\begin{lstlisting}[language=Java]
+import java.io.*;
+import java.util.Scanner;
+
+public class FileReadWrite {
+    public static void main(String[] args) throws IOException {
+        // Nom du fichier
+        String fileName = "phrases.txt";
+
+        // 1. Écriture dans le fichier
+        BufferedWriter writer = new BufferedWriter(new FileWriter(fileName));
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Veuillez entrer 3 phrases :");
+        for (int i = 1; i <= 3; i++) {
+            System.out.print("Entrez la phrase " + i + " : ");
+            String phrase = scanner.nextLine();
+            writer.write(phrase); // Écrire la phrase dans le fichier
+            writer.newLine();     // Aller à la ligne suivante
+        }
+        writer.close(); // Fermer le BufferedWriter
+
+        // 2. Lecture du fichier
+        System.out.println("\nContenu du fichier :");
+        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+        String line;
+        while ((line = reader.readLine()) != null) {
+            System.out.println(line); // Afficher chaque ligne
+        }
+        reader.close(); // Fermer le BufferedReader
+        scanner.close(); // Fermer le Scanner
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 13}
+\noindent \textbf{Énoncé :} Créez une fonction qui prend deux nombres comme arguments (	exttt{num}, 	exttt{length}) et renvoie un tableau de multiples de 	exttt{num} jusqu'à ce que la longueur du tableau atteigne 	exttt{length}.
+
+\begin{lstlisting}[language=Java]
+import java.util.Arrays;
+
+public class MultiplesArray {
+    public static int[] generateMultiples(int num, int length) {
+        // Créer un tableau pour contenir les multiples
+        int[] multiples = new int[length];
+
+        // Remplir le tableau avec les multiples
+        for (int i = 0; i < length; i++) {
+            multiples[i] = num * (i + 1);
+        }
+
+        return multiples;
+    }
+
+    public static void main(String[] args) {
+        int[] result = generateMultiples(5, 10);
+        System.out.println("Multiples de 5 : " + Arrays.toString(result));
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 14}
+\noindent \textbf{Énoncé :} Créez un programme qui traite un tableau de chaînes représentant des accords musicaux. Pour chaque accord dans le tableau, ajoutez le chiffre 	exttt{7} à la fin, sauf si l'accord se termine déjà par 	exttt{7}. Si le tableau est vide, le programme doit renvoyer un tableau vide.
+
+\begin{lstlisting}[language=Java]
+import java.util.Arrays;
+
+public class JazzifyChords {
+    public static String[] jazzify(String[] chords) {
+        if (chords.length == 0) {
+            return new String[0]; // Retourner un tableau vide si aucun accord
+        }
+
+        // Créer un tableau pour stocker les accords modifiés
+        String[] jazzifiedChords = new String[chords.length];
+
+        for (int i = 0; i < chords.length; i++) {
+            if (chords[i].endsWith("7")) {
+                jazzifiedChords[i] = chords[i]; // Garde l'accord tel quel
+            } else {
+                jazzifiedChords[i] = chords[i] + "7"; // Ajoute "7"
+            }
+        }
+
+        return jazzifiedChords;
+    }
+
+    public static void main(String[] args) {
+        String[] accords = {"G", "F", "C", "F7"};
+        System.out.println("Accords jazzifiés : " + Arrays.toString(jazzify(accords)));
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\section*{Exo 15}
+\noindent \textbf{Énoncé :} Étant donné une chaîne, créez une fonction pour inverser la casse. Toutes les lettres minuscules doivent être majuscules et vice versa.\newline
+Exemple : \texttt{reverseCase("MANY THANKS")} renvoie \texttt{"many thanks"}.
+
+\begin{lstlisting}[language=Java]
+public class ReverseCase {
+    public static String reverseCase(String str) {
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+
+            if (Character.isUpperCase(c)) {
+                result.append(Character.toLowerCase(c)); // Convertir en minuscule
+            } else if (Character.isLowerCase(c)) {
+                result.append(Character.toUpperCase(c)); // Convertir en majuscule
+            } else {
+                result.append(c); // Garder les caractères non alphabétiques
+            }
+        }
+
+        return result.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(reverseCase("MANY THANKS")); // Affiche "many thanks"
+        System.out.println(reverseCase("sPoNtAnEoUs")); // Affiche "SpOnTaNeOuS"
+    }
+}
+\end{lstlisting}
+\clearpage
+
+\end{document}

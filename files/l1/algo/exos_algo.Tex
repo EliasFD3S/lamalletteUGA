@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
-\usepackage{listings}
+\usepackage{listingsutf8}
 \usepackage{xcolor}
 
 % Configuration pour les listings de code
@@ -24,8 +24,23 @@
     captionpos=b,
     breaklines=true,
     breakatwhitespace=false,
-    escapeinside={\%*}{*)}
+    escapeinside={\%*}{*)},
+    literate=%
+        {é}{{\'e}}1
+        {è}{{\`e}}1
+        {ê}{{\^e}}1
+        {ë}{{\¨e}}1
+        {à}{{\`a}}1
+        {â}{{\^a}}1
+        {î}{{\^i}}1
+        {ï}{{\¨i}}1
+        {ô}{{\^o}}1
+        {ù}{{\`u}}1
+        {û}{{\^u}}1
+        {ü}{{\¨u}}1
+        {ç}{{\c c}}1
 }
+
 
 \title{Exercices pour Initiation \`a l'informatique et \`a l'algorithmique}
 \author{}

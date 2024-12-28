@@ -100,7 +100,7 @@
       },
       "statistiques": {
         "titre": "Statisitques 1",
-        "icone": "fas fa-sigma",
+        "icone": "fas fa-percent",
         "sections": [
           {
             "titre": "Cours",

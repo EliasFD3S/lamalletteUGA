@@ -66,46 +66,6 @@
           }
         ]
       },
-      "probabilites": {
-        "titre": "Probabilités 1",
-        "icone": "fas fa-dice",
-        "sections": [
-          {
-            "titre": "Cours",
-            "fichiers": [
-              {
-                "titre": "Synthèse du cours",
-                "chemin": "files/l1/analyse/Probas1_SynthèseCours.pdf"
-              },
-              {
-                "titre": "Sources LaTeX",
-                "chemin": "files/l1/analyse/Probas1_SynthèseCours.tex"
-              }
-            ]
-          },
-          {
-            "titre": "Exercices",
-            "fichiers": [
-              {
-                "titre": "Exercices probas",
-                "chemin": "files/l1/probas/Exos_Probas1.pdf"
-              },
-              {
-                "titre": "Sources LaTeX",
-                "chemin": "files/l1/probas/Exos_Probas1.tex"
-              },
-              {
-                "titre": "CC2",
-                "chemin": "files/l1/probas/CC2.pdf"
-              },
-              {
-                "titre": "Correction CC2",
-                "chemin": "files/l1/probas/CC2correction.pdf"
-              }
-            ]
-          }
-        ]
-      },
       "algo": {
         "titre": "Programmation",
         "icone": "fas fa-code",
@@ -133,6 +93,46 @@
               {
                 "titre": "Sources Java",
                 "chemin": "files/l1/algo/exos_algo.zip"
+              }
+            ]
+          }
+        ]
+      },
+      "statistiques": {
+        "titre": "Statisitques 1",
+        "icone": "fas fa-sigma",
+        "sections": [
+          {
+            "titre": "Cours",
+            "fichiers": [
+              {
+                "titre": "Synthèse du cours",
+                "chemin": "files/l1/stats/Synthèse_statistiques.pdf"
+              },
+              {
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/stats/Synthèse_statistiques.tex"
+              }
+            ]
+          },
+          {
+            "titre": "Exercices",
+            "fichiers": [
+              {
+                "titre": "Exercices stats",
+                "chemin": "files/l1/stats/Exercices_statistiques.pdf"
+              },
+              {
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/stats/Exercices_statistiques.tex"
+              },
+              {
+                "titre": "Annexe 1",
+                "chemin": "files/l1/stats/anx1.png"
+              },
+              {
+                "titre": "Annexe 2",
+                "chemin": "files/l1/stats/anx2.png"
               }
             ]
           }

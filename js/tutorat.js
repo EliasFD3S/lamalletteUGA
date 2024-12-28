@@ -142,6 +142,11 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // PDF
         'pdf': 'far fa-file-pdf',
+
+        //Images 
+        'png': 'fas fa-image',
+        'jpg': 'fas fa-image',
+        'bmp': 'fas fa-image',
         
         // Racket et R
         'rkt': 'fas fa-lambda',  // Pour DrRacket

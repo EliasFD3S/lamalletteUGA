@@ -1,34 +1,24 @@
 {
     "professeurs": [
         {
-            "matiere": "Algèbre linéaire",
-            "nom": "Professeur A",
-            "email": "prof.a@univ-grenoble-alpes.fr"
+            "matiere": "Algèbre linéaire 1",
+            "nom": "Jacques Istas",
+            "email": "Jacques.Istas@univ-grenoble-alpes.fr"
         },
         {
-            "matiere": "Analyse réelle",
-            "nom": "Professeur B",
-            "email": "prof.b@univ-grenoble-alpes.fr"
+            "matiere": "Analyse réelle 1",
+            "nom": "Julien Grépat",
+            "email": "Julien.Grepat@univ-grenoble-alpes.fr"
         },
         {
-            "matiere": "Probabilités",
-            "nom": "Professeur C",
-            "email": "prof.c@univ-grenoble-alpes.fr"
+            "matiere": "Initiation à l’informatique et à l’algorithmique",
+            "nom": "Benoît Lemaire",
+            "email": "Benoit.Lemaire@univ-grenoble-alpes.fr"
         },
         {
-            "matiere": "Algorithmique",
-            "nom": "Professeur D",
-            "email": "prof.d@univ-grenoble-alpes.fr"
-        },
-        {
-            "matiere": "Sciences cognitives",
-            "nom": "Professeur E",
-            "email": "prof.e@univ-grenoble-alpes.fr"
-        },
-        {
-            "matiere": "Microéconomie",
-            "nom": "Professeur F",
-            "email": "prof.f@univ-grenoble-alpes.fr"
+            "matiere": "Introduction à la statistique",
+            "nom": "Julien Grépat",
+            "email": "Julien.Grepat@univ-grenoble-alpes.fr"
         }
     ]
-} 
+}

@@ -137,6 +137,46 @@
             ]
           }
         ]
+      },
+      "probas": {
+        "titre": "Probabilités",
+        "icone": "fas fa-dice",
+        "sections": [
+          {
+            "titre": "Cours",
+            "fichiers": [
+              {
+                "titre": "Synthèse du cours",
+                "chemin": "files/l1/probas/Probas1_SynthèseCours.pdf"
+              },
+              {
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/probas/Probas1_SynthèseCours.tex"
+              }
+            ]
+          },
+          {
+            "titre": "Exercices",
+            "fichiers": [
+              {
+                "titre": "Exercices",
+                "chemin": "files/l1/probas/Exos_Probas1.pdf"
+              },
+              {
+                "titre": "Sources LaTeX",
+                "chemin": "files/l1/probas/Exos_Probas1.tex"
+              },
+              {
+                "titre": "CC2",
+                "chemin": "files/l1/probas/CC2.pdf"
+              },
+              {
+                "titre": "Correction CC2",
+                "chemin": "files/l1/probas/CC2correction.pdf"
+              }
+            ]
+          }
+        ]
       }
     }
   },
